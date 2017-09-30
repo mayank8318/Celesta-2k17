@@ -16,7 +16,6 @@ import com.iitp.mayank.celesta2k17.utils.NetworkUtils;
 import java.io.IOException;
 
 import pl.droidsonroids.gif.GifDrawable;
-import pl.droidsonroids.gif.GifImageView;
 
 /**
  * Created by manish on 26/8/17.
