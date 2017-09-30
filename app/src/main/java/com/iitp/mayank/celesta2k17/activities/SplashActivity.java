@@ -16,6 +16,7 @@ import com.iitp.mayank.celesta2k17.utils.NetworkUtils;
 import java.io.IOException;
 
 import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * Created by manish on 26/8/17.
@@ -24,18 +25,29 @@ import pl.droidsonroids.gif.GifDrawable;
 public class SplashActivity extends Activity {
     Handler handler;
     Runnable action;
+    private GifDrawable splashGif;
+    private GifImageView splashImageView;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
 
+        splashImageView = findViewById(R.id.splash);
+        try {
+            splashGif = new GifDrawable(getResources(),R.drawable.splash);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        splashImageView.setImageDrawable(splashGif);
+
         handler = new Handler();
         action = new Runnable(){
             @Override
             public void run(){
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                splashGif.stop();
+//                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+//                startActivity(intent);
+//                finish();
             }
         };
 
