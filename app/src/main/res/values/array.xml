@@ -18,7 +18,6 @@
         <item>Design</item>
         <item>Photography</item>
         <item>Treasure Hunt</item>
-        <item>Story Writing</item>
         <item>Quiz-wiz</item>
     </string-array>
 
@@ -32,7 +31,6 @@
         <item>Not Just Another Computer Klub</item>
         <item>The Electrical Engineering Club</item>
         <item>Society of Automobile Engineers</item>
-        <item>Student Council of Mechanical Engineers</item>
         <item>Association of Civil Engineers</item>
     </string-array>
 
@@ -46,7 +44,6 @@
         <item>in.org.celesta2k17.activities.DesignEvents</item>
         <item>in.org.celesta2k17.activities.PhotographyEvents</item>
         <item>in.org.celesta2k17.activities.TreasureHunt</item>
-        <item>in.org.celesta2k17.activities.StoryWritingEvents</item>
         <item>in.org.celesta2k17.activities.QuizWizEvents</item>
     </string-array>
 
@@ -60,7 +57,6 @@
         <item>@drawable/design</item>
         <item>@drawable/photography</item>
         <item>@drawable/treasure_hunt</item>
-        <item>@drawable/story_writing</item>
         <item>@drawable/quiz_wiz</item>
     </integer-array>
 
@@ -551,24 +547,28 @@
 
     <!--Expo Events-->
     <string-array name="array_expo_event_headers">
-        <item>SCHOOL EXHIBITION</item>
-        <item>VIRTUAL AUTO EXPO</item>
-        <item>SAMADHAN</item>
+        <item>School Exhibition</item>
+        <item>Virtual Auto Expo</item>
+        <item>Samadhan</item>
+        <item>Tech chronicles</item>
     </string-array>
 
     <string-array name="array_expo_event_text">
         <item>Focussed on ingraining a scientific and creative attitude in our young students to make them comprehend the interdependence of science, technology and society by a hands- on experience. The exhibition seeks to engage children  to synergise experiences and motivate each other to design and develop something novel.\n\nProblem Statement:\nStudents of schools are invited to come up and present a science project/ model &amp; showcase their young ,creative &amp; innovative minds.(*This event creates a culture that promotes the application of theoretical knowledge to the practical obstacles which promotes the implementation of scientific ideas into the routine activities.)\n\n\n-A few exemplar ideas pertaining to  themes for development of exhibits are: Energy,Health,Nutrition &amp; Cleanliness(E.g:Demonstration of models/ projects to create awareness among children about rules of safety inappropriate hazardous situation to avoid accidents and injuries;Demonstration of models/ projects to show the effect of junk food items, adulterated food items on our body and its preventive measures;Model to demonstrate importance of balanced diet and nutritional values of various food items)</item>
         <item>This is an event for all the automobile enthusiasts.</item>
         <item>Participants will be organised into groups.One picture will be shown to them and in the picture there will be different conditions/problems that will be shown in that picture.According to the conditions provide they will discuss the picture among themselves and then using their own intellect,they have to make strategy,planning and will show how they will manage in tackling the problem to give the maximum output i.e, the problem is solved with maximum accuracy.This type of event helps in teaching students how they can coordinate with each other when they will need to,also it helps in making quick and effective decisions.</item>
+        <item>This pre-celesta event gives the prolific writer in you a chance, a chance to cross the horizons of imagination, to expand the field of one’s view and plot a sci-fi story. It will be your story so it can be anything, literally anything - Alien invasion to humans going to another planet or time-travelling and what not!\n\nSo just think outside the box, use your imagination, bend the scope of view and write a thriller!\nWhat to do : You are expected to write this story and then share it on facebook with the following hastags -\n#TechChronicles\n#Celesta2k17\nAlso you have to mail the story to us at rtdc@iitp.ac.in with the subject : Entry for TechChronicles</item>
     </string-array>
 
     <string-array name="array_expo_event_rules">
         <item>-Scoring will be done based on participant\'s ability to &quot;working &amp; explanation&quot;, &quot; concept clarity &amp; demonstration&quot; &amp; &quot;creativity &quot;.\n-Participants are allowed to select language for presenting their model/project as per their level of comfort.\n-Certificates for participation will be given to All the participants. \n-Winners will be awarded with exciting  prizes.!\n-In case of any discrepancy, the decision of the organisers will be final.</item>
         <item>Make a presentation (ppt) on any one of your favorite cars (even an ATV/ formula one) of any company. You have to act as a representative trying to sell your product.\nPresentation must contain the following points:\n1. Car Features (including photos)\n2. Cost\n3. Why people would buy your product?\n4. Any extra thing which you want to add.\nExtra points if you include a small video (1 min max) on that car in the presentation.\nMaximum time for presentation: 6 minutes.\nYou can participate individually or in a team of two.\n\nJudging criteria:\n1. Presentation Skills\n2. Content of the ppt\n3. Are you able to convince the costumer (judges in this case) to buy your product\n4. How much good is your product\n5. How much knowledge you have about your product</item>
         <item>-1</item>
+        <item>1. Word limit shouldn’t exceed 500 words.\n2. No vulgar content needs to be included.\n3. The story should be sent as a word file (.doc) file as an attachment in the mail along with the link to your post with it in the mail.</item>
     </string-array>
 
     <string-array name="array_expo_event_date_time">
+        <item>-1</item>
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
@@ -578,11 +578,13 @@
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_expo_event_images">
         <item>@drawable/tech_exhibition</item>
         <item>@drawable/vautoexpo</item>
+        <item>@drawable/njack</item>
         <item>@drawable/njack</item>
     </integer-array>
 
@@ -590,12 +592,14 @@
         <item>Anushree Jain\nSunil Kumar Yadav\nSatyaki Barman</item>
         <item>Suraj Jha\nSampoorna Kashyap</item>
         <item>Krishan Kant</item>
+        <item>Abhinav Gyan</item>
     </string-array>
 
     <string-array name="array_expo_contacts">
         <item> - 9955525433\n - 9955542806\n - 9473543503</item>
         <item> - 7493835335\n - 7541051888</item>
         <item> - 9468285730</item>
+        <item> - 7250925416</item>
     </string-array>
 
 
