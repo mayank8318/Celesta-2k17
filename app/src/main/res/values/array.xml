@@ -93,7 +93,7 @@
     </string-array>
 
     <string-array name="array_njack_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
         <item>Y</item>
         <item>Y</item>
         <item>Y</item>
@@ -405,11 +405,11 @@
     </string-array>
 
     <string-array name="array_photography_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_photography_event_venue">
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_photography_event_images">
@@ -444,15 +444,15 @@
     </string-array>
 
     <string-array name="array_treasure_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_treasure_event_venue">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_treasure_event_images">
@@ -487,11 +487,11 @@
     </string-array>
 
     <string-array name="array_story_writing_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_story_writing_event_venue">
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_story_writing_event_images">
@@ -524,13 +524,13 @@
     </string-array>
 
     <string-array name="array_coding_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_coding_event_venue">
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_coding_event_images">
@@ -569,15 +569,15 @@
     </string-array>
 
     <string-array name="array_expo_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_expo_event_venue">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_expo_event_images">
@@ -622,15 +622,15 @@
     </string-array>
 
     <string-array name="array_robotics_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_robotics_event_venue">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
 
@@ -682,16 +682,16 @@
 
     <string-array name="array_quizwiz_event_venue">
 
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_quizwiz_event_date_time">
 
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_quizwiz_organizers">
@@ -862,40 +862,40 @@
         <item>Technical Secretary, Junior Year</item>
         <item>Technical Secretary, Sophomore Year</item>
         <item>Technical Secretary, UG Girls</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
-        <item>Sub-Coordinator</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <integer-array name="array_team_images">
@@ -999,7 +999,7 @@
     </string-array>
 
     <string-array name="array_debate_event_text">
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_debate_event_rules">
@@ -1009,12 +1009,12 @@
 
     <string-array name="array_debate_event_venue">
 
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_debate_event_date_time">
 
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_debate_organizers">
@@ -1044,12 +1044,12 @@
 
     <string-array name="array_social_event_venue">
 
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_social_event_date_time">
 
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_social_organizers">
@@ -1080,12 +1080,12 @@
     </string-array>
 
     <string-array name="array_design_event_venue">
-        <item></item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_design_event_date_time">
 
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_design_organizers">
@@ -1106,47 +1106,55 @@
         <item>Spageridge</item>
         <item>House of Cards</item>
         <item>Chem-e-switch</item>
+        <item>Rocket Propulsion</item>
     </string-array>
 
     <string-array name="array_buildit_event_text">
         <item>Use the power of our global online community to apply thousands of engineering minds to your design problem for less than the price of one.Whether you have a brand new invention on the back of an envelope and you need to turn it into reality, an old part that has stubbornly never worked quite right, an aesthetic challenge you\'d like the design world\'s opinion on, or you\'d just like to inject some fresh ideas into your current in-house design department, a CAD Master Challenge is the most effective way to get the engineering world working on your problem.\nA CAD master challenge is also a great way to let the tech community know about your exciting new designs and your passion for optimum design.</item>
         <item>Ever wondered what holds up monstrous skyscrapers, beautiful monuments or one’s own house ??\nCONCRETE,PILLARS……\nwell not really, the right answer is PASSION. Passion to create, passion to build, passion to design.If one has the passion then even cards can behold the structures.\nCelesta brings you a chance of showing your engineering skills with cards and passion! So, get innovative and build your own house with CARDS.\n\nEVENT STRUCTURE-\nThe event  comprises of TWO rounds, of varying difficulty levels. Teams shortlisted from round 1 will compete in round 2.\n\nTEAM SIZE-\nEach team should be of 2 members.</item>
         <item>Are you that budding engineer who gets super-excited while tinkering with chemicals? Are you amazed by the variety and versatility of reactions that happen to matter around us? Then this is the right platform for you to experiment with your ideas. Come and reproduce a mechanism with the help of your knowledge in chemistry and engineering skills in order to automate the switch of an electric circuit we\'ve got ready for you. The aim is to make the mechanism turn off the switch of the circuit within the specified time. So bounce those exemplary ideas off your brain, \'coz the stage is set for Chem-e-switch.</item>
+        <item>You need to convert a simple plastic bottle into a rocket which can be fired through the rocket launcher (which will be provided) into the sky reaching weapon of mass destruction.The plastic bottle is filled with alcohol vapour and secured on the rocket launcher. It blasts off as soon as an electric spark is produced by Rocket launcher. ( Cheat Codes : For better control of the range of rocket, the concepts of Centre of Mass -Centre of Pressure should be applied while making the rocket.)</item>
     </string-array>
 
     <string-array name="array_buildit_event_rules">
         <item>1.Make each of the drawings in separate .dwg files.\n2.The units for all the drawings must be set appropriately (Proper scaling factors).\n3.Put all the .dwg files in a .zip file named "\u003CYour Name _ YourInstitution>” and mail it to \n4.ace@iitp.ac.in with the subject “Drawings-Civil Maestro”.\n5.Each drawing must contain a title block containing your name, the question number and Institution Name.\n6.Violation of any of the above rules will lead to deduction of marks.\n7.In case of a tie during evaluation the person who had sent the earliest received mail would be considered the winner.\n8.All mails sent after 3.5hrs of starting will NOT be considered for evaluation.\n9.If any of the submitted drawings are partially complete then partial marks would be awarded.\n10. If any of the dimensions are not specified the participant is expected to use their judgement to use an appropriate dimension as per the drawings given.</item>
         <item>1) Each team will be provided with a certain number of deck of cards and some papertapes.\n2) Participants will be given a problem statement under which they have to replicate a given 3-d structure with the help of given cards.\n3) For first round participants will be given &quot;45 minutes&quot; to complete the task.\n4) For second round  participants will be given &quot;60 minutes&quot; to complete the task.\n5) In case none of the team is able to complete the task in the allotted time then the team which is most close to the to completion will be declared as winners.\n/nJUDGING CRITERIA-\nParticipants will be judged on the basis of STABILITY, ACCURACY &amp; AESTHETICS of the model. In case of any dispute final call will be taken by the ORGANISING COMMITTEE.</item>
         <item>1)The participants will form teams of maximum three members.\n2)There will be only a single round.\n3)The chemical reaction and mechanism(along with the type of switch to be used) should be submitted to the organizers prior to the fest date (on or before 30th September 2017). The mechanism should be set up at the venue of the event only, but you must come with preparation.\n4)The electrical circuit(excluding the switch) and necessary chemicals will be provided by the organizers but other materials should be brought by the participants.\n4)The participants must be present at the venue on time.\n5)From the start of the reaction, the switch must be broken within a time of 2 minutes.\n6)No damage to be done to the circuit. No tampering to be done with any components of the circuit. The mechanism should be fully external to the circuit.\n7)There is no limitation on the size of the mechanism.\n8)No human intervention is allowed once the mechanism is made and reaction is fully triggered. It should automatically complete the task.\n9)No spilling of chemicals or leaving residues on surroundings is allowed.</item>
+        <item>1) A team can have at most 2 members.\n2) Each team needs to bring a modified bottle rocket with them. The alcohol will be provided.\n3) Inner diameter of mouth of the bottle should be slightly greater than the nozzle.</item>
     </string-array>
 
     <string-array name="array_buildit_event_venue">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_buildit_event_date_time">
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
-        <item>7th Aug, 10:30 pm</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
 
     <string-array name="array_buildit_organizers">
         <item>Suraj\nAnkit Rai</item>
         <item>Abhinav Sharma\nAshutosh</item>
         <item>Aswin krishna\nYash Choudhary\nRajat Gupta</item>
+        <item>Dewansh Jaiswal\nAshish Singh</item>
     </string-array>
 
     <integer-array name="array_buildit_event_images">
         <item>@drawable/spageridge_final</item>
         <item>@drawable/the_hoc</item>
         <item>@drawable/chem_e_switch</item>
+        <item>@drawable/rocket_propulsion</item>
     </integer-array>
     <string-array name="array_buildit_contacts">
         <item> - 7493835335\n - 7541051888</item>
         <item> - 9410866066\n - 9470330296</item>
         <item> - 8129450246\n - 7509116834\n - 9955529931</item>
+        <item> - 8765113312\n - 7634880080</item>
     </string-array>
     <!--Build it  events end -->
 </resources>

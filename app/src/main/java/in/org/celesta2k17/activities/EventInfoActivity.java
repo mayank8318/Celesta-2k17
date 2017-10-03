@@ -54,9 +54,11 @@ public class EventInfoActivity extends AppCompatActivity {
                     .into((ImageView) findViewById(R.id.event_info_imageview));
 
         if (text.equals("-1"))
-            text = "No Information Available";
+            ((TextView) findViewById(R.id.event_info_textview)).setVisibility(View.GONE);
+        else
+            ((TextView) findViewById(R.id.event_info_textview)).setText(text);
+
         final String finalText = text;
-        ((TextView) findViewById(R.id.event_info_textview)).setText(text);
 
         TextView rulesTextView = (TextView) findViewById(R.id.event_rules_textview);
         if (rules.equals("-1")) {
@@ -68,12 +70,23 @@ public class EventInfoActivity extends AppCompatActivity {
         String organizers = intent.getStringExtra(EXTRA_ORGANIZERS);
         final String contacts = intent.getStringExtra(EXTRA_CONTACTS);
         if (organizers.equals("-1"))
-            organizers = "No information available";
-        ((TextView) findViewById(R.id.event_organizers)).setText(organizers);
-        ((TextView) findViewById(R.id.event_contact)).setText(contacts);
+            ((TextView) findViewById(R.id.event_organizers)).setVisibility(View.GONE);
+        else
+            ((TextView) findViewById(R.id.event_organizers)).setText(organizers);
 
-        ((TextView) findViewById(R.id.event_date_time)).setText(dateTime);
-        ((TextView) findViewById(R.id.event_venue)).setText(venue);
+        if(contacts.equals("-1"))
+            ((TextView) findViewById(R.id.event_contact)).setVisibility(View.GONE);
+        else
+            ((TextView) findViewById(R.id.event_contact)).setText(contacts);
+
+        if(!dateTime.equals("-1"))
+            ((TextView) findViewById(R.id.event_date_time)).setText(dateTime);
+        else
+            ((TextView) findViewById(R.id.event_date_time)).setVisibility(View.GONE);
+        if(!venue.equals("-1"))
+            ((TextView) findViewById(R.id.event_venue)).setText(venue);
+        else
+            ((TextView) findViewById(R.id.event_venue)).setVisibility(View.GONE);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_share_event);
         fab.setOnClickListener(new View.OnClickListener() {
