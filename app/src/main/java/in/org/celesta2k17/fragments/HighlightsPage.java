@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.StringTokenizer;
 
 /**
@@ -91,6 +92,8 @@ public class HighlightsPage extends android.support.v4.app.Fragment {
                 header.add(stringTokenizer.nextToken());
                 details.add(stringTokenizer.nextToken());
             }
+            Collections.reverse(header);
+            Collections.reverse(details);
             bufferedReader.close();
             fileReader.close();
             checkEmpty();
