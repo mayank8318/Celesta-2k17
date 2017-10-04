@@ -55,8 +55,16 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:drawablePadding="8dp"
-                android:textColor="@color/colorPrimaryLight"
-                />
+                android:textColor="@color/colorPrimaryLight" />
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="@color/colorSignUp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="16dp" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 

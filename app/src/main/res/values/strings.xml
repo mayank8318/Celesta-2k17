@@ -65,5 +65,7 @@
     <string name="official_website">Our official website</string>
     <string name="coming_soon">Coming Soon</string>
     <string name="url_login">https://celesta.org.in/api/login</string>
+    <string name="forgot_password">Forgot Password!</string>
+    <string name="url_forgot_password">http://celesta.org.in/reset</string>
 
 </resources>

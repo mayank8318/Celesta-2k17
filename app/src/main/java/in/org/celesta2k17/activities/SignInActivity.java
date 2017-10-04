@@ -1,6 +1,8 @@
 package in.org.celesta2k17.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
@@ -9,6 +11,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -35,6 +38,7 @@ public class SignInActivity extends AppCompatActivity {
     Button buttonSignIn;
     TextInputLayout emailIDWrapper;
     TextInputLayout passwordWrapper;
+    TextView forgotPassword;
     String mEmail;
     String mPassword;
     RequestQueue mQueue;
@@ -51,6 +55,19 @@ public class SignInActivity extends AppCompatActivity {
         mQueue = Volley.newRequestQueue(this);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this).edit();
         mUrl = getString(R.string.url_login);
+        forgotPassword = (TextView) findViewById(R.id.forgot_password);
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse(getString(R.string.url_forgot_password));
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
+
         buttonSignIn = (Button) findViewById(R.id.button_signin);
         emailIDWrapper = (TextInputLayout) findViewById(R.id.eamil_id_wrapper_signin);
         passwordWrapper = (TextInputLayout) findViewById(R.id.password_wrapper_signin);
