@@ -32,7 +32,6 @@
                 android:lineSpacingExtra="4sp"
                 android:padding="4dp"
                 android:text="@string/NJACK_Events"
-                android:textAllCaps="true"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 android:textColor="@color/colorSignUp"
                 android:textSize="17sp" />
