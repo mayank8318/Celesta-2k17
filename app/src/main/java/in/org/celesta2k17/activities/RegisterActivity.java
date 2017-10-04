@@ -72,6 +72,8 @@ public class RegisterActivity extends AppCompatActivity {
                 clearErrors();
                 boolean b = validateInputs();
                 if (b) {
+                    Toast.makeText(getApplicationContext(), "Logging in..", Toast.LENGTH_SHORT).show();
+                    buttonRegister.setVisibility(View.GONE);
                     //Code for sending the details
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
                             new Response.Listener<String>() {
@@ -102,6 +104,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onErrorResponse(VolleyError error) {
                                     Log.v("Error : ", error.toString());
                                     error.printStackTrace();
+                                    buttonRegister.setVisibility(View.VISIBLE);
                                 }
                             }
                     ) {
