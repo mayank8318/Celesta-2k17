@@ -37,7 +37,7 @@
     <string name="error_empty_field">Empty Field</string>
     <string name="mobile_no_hint">Mobile No.</string>
     <string name="error_invalid_mobile_no">Invalid Mobile No.</string>
-    <string name="register_url">https://celesta.tameesh.in/register</string>
+    <string name="register_url">http://celesta.org.in/api/register</string>
     <string name="api_key">iitp</string>
     <string name="register_param_name">name</string>
     <string name="register_param_college">college</string>
@@ -64,5 +64,6 @@
     <string name="follow_us">Follow us </string>
     <string name="official_website">Our official website</string>
     <string name="coming_soon">Coming Soon</string>
+    <string name="url_login">https://celesta.org.in/api/login</string>
 
 </resources>

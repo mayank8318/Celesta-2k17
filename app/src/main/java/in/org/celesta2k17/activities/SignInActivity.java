@@ -50,7 +50,7 @@ public class SignInActivity extends AppCompatActivity {
 
         mQueue = Volley.newRequestQueue(this);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this).edit();
-        mUrl = "https://celesta.tameesh.in/login";
+        mUrl = getString(R.string.url_login);
         buttonSignIn = (Button) findViewById(R.id.button_signin);
         emailIDWrapper = (TextInputLayout) findViewById(R.id.eamil_id_wrapper_signin);
         passwordWrapper = (TextInputLayout) findViewById(R.id.password_wrapper_signin);

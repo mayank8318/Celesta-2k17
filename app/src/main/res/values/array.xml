@@ -584,8 +584,8 @@
     <integer-array name="array_expo_event_images">
         <item>@drawable/tech_exhibition</item>
         <item>@drawable/vautoexpo</item>
-        <item>@drawable/njack</item>
-        <item>@drawable/njack</item>
+        <item>@drawable/expo</item>
+        <item>@drawable/expo</item>
     </integer-array>
 
     <string-array name="array_expo_organizers">
@@ -641,13 +641,13 @@
     <integer-array name="array_robotics_event_images">
         <item>@drawable/aqua_soccer</item>
         <item>@drawable/robowars</item>
-        <item>@drawable/njack</item>
+        <item>@drawable/robotics</item>
     </integer-array>
 
 
     <integer-array name="array_quizwiz_event_images">
-        <item>@drawable/njack</item>
-        <item>@drawable/njack</item>
+        <item>@drawable/quiz_wiz</item>
+        <item>@drawable/quiz_wiz</item>
         <item>@drawable/mind_benders</item>
     </integer-array>
 
@@ -1061,7 +1061,7 @@
     </string-array>
 
     <integer-array name="array_social_event_images">
-        <item>@drawable/njack</item>
+        <item>@drawable/social</item>
     </integer-array>
     <string-array name="array_social_contacts">
         <item> - 9958549808\n - 7739821813</item>
@@ -1097,7 +1097,7 @@
     </string-array>
 
     <integer-array name="array_design_event_images">
-        <item>@drawable/njack</item>
+        <item>@drawable/design</item>
     </integer-array>
     <string-array name="array_design_contacts">
         <item> - 9100917428\n - 9051951401</item>
