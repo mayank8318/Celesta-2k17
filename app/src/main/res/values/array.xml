@@ -550,25 +550,21 @@
         <item>School Exhibition</item>
         <item>Virtual Auto Expo</item>
         <item>Samadhan</item>
-        <item>Tech chronicles</item>
     </string-array>
 
     <string-array name="array_expo_event_text">
         <item>Focussed on ingraining a scientific and creative attitude in our young students to make them comprehend the interdependence of science, technology and society by a hands- on experience. The exhibition seeks to engage children  to synergise experiences and motivate each other to design and develop something novel.\n\nProblem Statement:\nStudents of schools are invited to come up and present a science project/ model &amp; showcase their young ,creative &amp; innovative minds.(*This event creates a culture that promotes the application of theoretical knowledge to the practical obstacles which promotes the implementation of scientific ideas into the routine activities.)\n\n\n-A few exemplar ideas pertaining to  themes for development of exhibits are: Energy,Health,Nutrition &amp; Cleanliness(E.g:Demonstration of models/ projects to create awareness among children about rules of safety inappropriate hazardous situation to avoid accidents and injuries;Demonstration of models/ projects to show the effect of junk food items, adulterated food items on our body and its preventive measures;Model to demonstrate importance of balanced diet and nutritional values of various food items)</item>
         <item>This is an event for all the automobile enthusiasts.</item>
         <item>Participants will be organised into groups.One picture will be shown to them and in the picture there will be different conditions/problems that will be shown in that picture.According to the conditions provide they will discuss the picture among themselves and then using their own intellect,they have to make strategy,planning and will show how they will manage in tackling the problem to give the maximum output i.e, the problem is solved with maximum accuracy.This type of event helps in teaching students how they can coordinate with each other when they will need to,also it helps in making quick and effective decisions.</item>
-        <item>This pre-celesta event gives the prolific writer in you a chance, a chance to cross the horizons of imagination, to expand the field of one’s view and plot a sci-fi story. It will be your story so it can be anything, literally anything - Alien invasion to humans going to another planet or time-travelling and what not!\n\nSo just think outside the box, use your imagination, bend the scope of view and write a thriller!\nWhat to do : You are expected to write this story and then share it on facebook with the following hastags -\n#TechChronicles\n#Celesta2k17\nAlso you have to mail the story to us at rtdc@iitp.ac.in with the subject : Entry for TechChronicles</item>
     </string-array>
 
     <string-array name="array_expo_event_rules">
         <item>-Scoring will be done based on participant\'s ability to &quot;working &amp; explanation&quot;, &quot; concept clarity &amp; demonstration&quot; &amp; &quot;creativity &quot;.\n-Participants are allowed to select language for presenting their model/project as per their level of comfort.\n-Certificates for participation will be given to All the participants. \n-Winners will be awarded with exciting  prizes.!\n-In case of any discrepancy, the decision of the organisers will be final.</item>
         <item>Make a presentation (ppt) on any one of your favorite cars (even an ATV/ formula one) of any company. You have to act as a representative trying to sell your product.\nPresentation must contain the following points:\n1. Car Features (including photos)\n2. Cost\n3. Why people would buy your product?\n4. Any extra thing which you want to add.\nExtra points if you include a small video (1 min max) on that car in the presentation.\nMaximum time for presentation: 6 minutes.\nYou can participate individually or in a team of two.\n\nJudging criteria:\n1. Presentation Skills\n2. Content of the ppt\n3. Are you able to convince the costumer (judges in this case) to buy your product\n4. How much good is your product\n5. How much knowledge you have about your product</item>
         <item>-1</item>
-        <item>1. Word limit shouldn’t exceed 500 words.\n2. No vulgar content needs to be included.\n3. The story should be sent as a word file (.doc) file as an attachment in the mail along with the link to your post with it in the mail.</item>
     </string-array>
 
     <string-array name="array_expo_event_date_time">
-        <item>-1</item>
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
@@ -578,13 +574,11 @@
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
-        <item>-1</item>
     </string-array>
 
     <integer-array name="array_expo_event_images">
         <item>@drawable/tech_exhibition</item>
         <item>@drawable/vautoexpo</item>
-        <item>@drawable/expo</item>
         <item>@drawable/expo</item>
     </integer-array>
 
@@ -592,14 +586,12 @@
         <item>Anushree Jain\nSunil Kumar Yadav\nSatyaki Barman</item>
         <item>Suraj Jha\nSampoorna Kashyap</item>
         <item>Krishan Kant</item>
-        <item>Abhinav Gyan</item>
     </string-array>
 
     <string-array name="array_expo_contacts">
         <item> - 9955525433\n - 9955542806\n - 9473543503</item>
         <item> - 7493835335\n - 7541051888</item>
         <item> - 9468285730</item>
-        <item> - 7250925416</item>
     </string-array>
 
 
@@ -641,14 +633,7 @@
     <integer-array name="array_robotics_event_images">
         <item>@drawable/aqua_soccer</item>
         <item>@drawable/robowars</item>
-        <item>@drawable/robotics</item>
-    </integer-array>
-
-
-    <integer-array name="array_quizwiz_event_images">
-        <item>@drawable/quiz_wiz</item>
-        <item>@drawable/quiz_wiz</item>
-        <item>@drawable/mind_benders</item>
+        <item>@drawable/maze_solver</item>
     </integer-array>
 
     <string-array name="array_robotics_organizers">
@@ -697,6 +682,12 @@
         <item>-1</item>
         <item>-1</item>
     </string-array>
+
+    <integer-array name="array_quizwiz_event_images">
+        <item>@drawable/electro_exquizite</item>
+        <item>@drawable/astro_particle_voyage</item>
+        <item>@drawable/mind_benders</item>
+    </integer-array>
 
     <string-array name="array_quizwiz_organizers">
         <item>Harpreet Kumar\nRahul Kumar\nDhanush S Ravikumar</item>
@@ -1036,41 +1027,47 @@
     <!--Social events-->
     <string-array name="array_social_event_headers">
         <item>Adhyayan Video Recording</item>
+        <item>Tech chronicles</item>
     </string-array>
 
     <string-array name="array_social_event_text">
         <item>"Future of a nation lies in the hands of its youth" – Asuma Sarutobi ‪Adhyayan: The video lecture making competition.India is one of the top five nations for out–of–school children of primary school age. Mainly due to the lack of teachers or/and lack of quality education. Celesta’17 along with RTDC IIT Patna brings you Adhyayan, an opportunity to share your knowledge and to help the students to rise.The event have been introduced to improve the educational situation in the Rural India and to brighten the future of the nation to its maximum potential.\nOnline Round:\nA team of maximum 2 students have to record a short video  lecture (5–15min)\nYou have to upload this video on your facebook account with #Lets_Teach_India and #Adhyayan\nTeams will be shortlisted depending on facebook likes and judges reviews.\nIt is preferred that you record an interactive video lecture.\nFINAL Round:\nShortlisted teams will be called to record a 30 minute lecture in the IIT Patna’s lecture recording studio or they can send their videos to rtdc.iitp@gmail.com.\nClips of the recorded lectures will be judged to decide the winners.</item>
+        <item>This pre-celesta event gives the prolific writer in you a chance, a chance to cross the horizons of imagination, to expand the field of one’s view and plot a sci-fi story. It will be your story so it can be anything, literally anything - Alien invasion to humans going to another planet or time-travelling and what not!\n\nSo just think outside the box, use your imagination, bend the scope of view and write a thriller!\nWhat to do : You are expected to write this story and then share it on facebook with the following hastags -\n#TechChronicles\n#Celesta2k17\nAlso you have to mail the story to us at rtdc@iitp.ac.in with the subject : Entry for TechChronicles</item>
     </string-array>
 
     <string-array name="array_social_event_rules">
         <item>Final Round Rules :\nTeam should follow NCERT (English or Hindi medium) while the conversation can be in hindi or/and english.\nTeam limit: A team can have maximum of 2 members.\nVideo should be within 20–30 min duration</item>
+        <item>1. Word limit shouldn’t exceed 500 words.\n2. No vulgar content needs to be included.\n3. The story should be sent as a word file (.doc) file as an attachment in the mail along with the link to your post with it in the mail.</item>
     </string-array>
 
     <string-array name="array_social_event_venue">
-
+        <item>-1</item>
         <item>-1</item>
     </string-array>
 
     <string-array name="array_social_event_date_time">
-
+        <item>-1</item>
         <item>-1</item>
     </string-array>
 
     <string-array name="array_social_organizers">
         <item>Osho Anand \n Raj</item>
+        <item>Abhinav Gyan</item>
     </string-array>
 
     <integer-array name="array_social_event_images">
-        <item>@drawable/social</item>
+        <item>@drawable/adhyayan</item>
+        <item>@drawable/tech_chronicles</item>
     </integer-array>
     <string-array name="array_social_contacts">
         <item> - 9958549808\n - 7739821813</item>
+        <item> - 7250925416</item>
     </string-array>
     <!--Social events end -->
 
     <!--Design events-->
     <string-array name="array_design_event_headers">
-        <item>CAD Master</item>
+        <item>CAD Maestro</item>
     </string-array>
 
     <string-array name="array_design_event_text">
@@ -1097,7 +1094,7 @@
     </string-array>
 
     <integer-array name="array_design_event_images">
-        <item>@drawable/design</item>
+        <item>@drawable/cad_mastro</item>
     </integer-array>
     <string-array name="array_design_contacts">
         <item> - 9100917428\n - 9051951401</item>
