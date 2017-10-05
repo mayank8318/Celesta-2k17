@@ -61,6 +61,7 @@ public class MyProfile extends AppCompatActivity {
             idTextView.setText(sharedPreferences.getString(getString(R.string.id), "12345"));
             collegeTextView.setText(sharedPreferences.getString(getString(R.string.college_name), "IIT Patna"));
             eventTextView.setText(sharedPreferences.getString(getString(R.string.event_participated), "-"));
+            eventTextView.setVisibility(View.GONE);
         }
     }
 

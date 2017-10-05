@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                 clearErrors();
                 boolean b = validateInputs();
                 if (b) {
-                    Toast.makeText(getApplicationContext(), "Logging in..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Registering..", Toast.LENGTH_SHORT).show();
                     buttonRegister.setVisibility(View.GONE);
                     //Code for sending the details
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
@@ -93,7 +93,10 @@ public class RegisterActivity extends AppCompatActivity {
                                                 Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
                                                 finish();
                                                 break;
+                                            default:
+                                                Toast.makeText(getApplicationContext(), "Error registering. Please try again later.", Toast.LENGTH_SHORT).show();
                                         }
+                                        buttonRegister.setVisibility(View.VISIBLE);
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
@@ -104,6 +107,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onErrorResponse(VolleyError error) {
                                     Log.v("Error : ", error.toString());
                                     error.printStackTrace();
+                                    Toast.makeText(getApplicationContext(), "Error registering. Please try again later", Toast.LENGTH_SHORT).show();
                                     buttonRegister.setVisibility(View.VISIBLE);
                                 }
                             }

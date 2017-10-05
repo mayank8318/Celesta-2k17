@@ -80,6 +80,8 @@ public class SignInActivity extends AppCompatActivity {
                 boolean b = validateInputs();
                 if (b) {
                     //Code for sending the details
+                    Toast.makeText(getApplicationContext(), "Logging in..", Toast.LENGTH_SHORT).show();
+                    buttonSignIn.setVisibility(View.GONE);
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
                             new Response.Listener<String>() {
                                 @Override
@@ -104,6 +106,9 @@ public class SignInActivity extends AppCompatActivity {
                                                 sharedPreferences.apply();
                                                 finish();
                                                 break;
+                                            case 400:
+                                                Toast.makeText(getApplicationContext(), "Invalid Email Id", Toast.LENGTH_SHORT).show();
+                                                break;
                                             case 409:
                                                 Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
                                                 finish();
@@ -112,7 +117,11 @@ public class SignInActivity extends AppCompatActivity {
                                                 Toast.makeText(getApplicationContext(), "Invalid Login", Toast.LENGTH_LONG).show();
                                                 finish();
                                                 break;
+                                            default:
+                                                Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
                                         }
+
+                                        buttonSignIn.setVisibility(View.VISIBLE);
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
@@ -123,6 +132,8 @@ public class SignInActivity extends AppCompatActivity {
                                 public void onErrorResponse(VolleyError error) {
                                     Log.v("Error : ", error.toString());
                                     error.printStackTrace();
+                                    Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
+                                    buttonSignIn.setVisibility(View.VISIBLE);
                                 }
                             }
                     ) {
