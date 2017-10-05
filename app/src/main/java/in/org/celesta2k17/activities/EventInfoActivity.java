@@ -1,16 +1,30 @@
 package in.org.celesta2k17.activities;
 
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import in.org.celesta2k17.R;
 
@@ -45,7 +59,7 @@ public class EventInfoActivity extends AppCompatActivity {
         String rules = intent.getStringExtra(EXTRA_RULES);
         final String dateTime = intent.getStringExtra(EXTRA_DATE_TIME);
         String venue = intent.getStringExtra(EXTRA_VENUE);
-        int imageId = intent.getIntExtra(EXTRA_IMAGE_ID, -1);
+        final int imageId = intent.getIntExtra(EXTRA_IMAGE_ID, -1);
 
         ((TextView) findViewById(R.id.event_info_name)).setText(header);
         if (imageId != -1)
@@ -58,7 +72,7 @@ public class EventInfoActivity extends AppCompatActivity {
         else
             ((TextView) findViewById(R.id.event_info_textview)).setText(text);
 
-        final String finalText = text;
+        final String finalText = text.equals("-1") ? "Keep checking the app and website for updates." : text;
 
         TextView rulesTextView = (TextView) findViewById(R.id.event_rules_textview);
         if (rules.equals("-1")) {
@@ -74,16 +88,17 @@ public class EventInfoActivity extends AppCompatActivity {
         else
             ((TextView) findViewById(R.id.event_organizers)).setText(organizers);
 
-        if(contacts.equals("-1"))
+        if (contacts.equals("-1"))
             ((TextView) findViewById(R.id.event_contact)).setVisibility(View.GONE);
         else
             ((TextView) findViewById(R.id.event_contact)).setText(contacts);
 
-        if(!dateTime.equals("-1"))
+        if (!dateTime.equals("-1"))
             ((TextView) findViewById(R.id.event_date_time)).setText(dateTime);
         else
             ((TextView) findViewById(R.id.event_date_time)).setVisibility(View.GONE);
-        if(!venue.equals("-1"))
+
+        if (!venue.equals("-1"))
             ((TextView) findViewById(R.id.event_venue)).setText(venue);
         else
             ((TextView) findViewById(R.id.event_venue)).setVisibility(View.GONE);
@@ -95,7 +110,7 @@ public class EventInfoActivity extends AppCompatActivity {
                 Resources resources = getResources();
                 String shareString = resources.getText(R.string.share_message) + "\n"
                         + resources.getText(R.string.name) + ": " + header + "\n"
-                        + resources.getText(R.string.date_time) + ": " + dateTime + "\n"
+                        + resources.getText(R.string.date_time) + ": " + (dateTime.equals("-1") ? "Keep checking the app and website for updates." : dateTime) + "\n"
                         + finalText;
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
@@ -104,7 +119,6 @@ public class EventInfoActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(shareIntent, resources.getText(R.string.share_to)));
             }
         });
-
     }
 
     @Override
@@ -117,5 +131,4 @@ public class EventInfoActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

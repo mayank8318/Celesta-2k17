@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ import java.util.TimerTask;
 public class HomePage extends android.support.v4.app.Fragment {
 
     final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
-    final long PERIOD_MS = 4000; // time in milliseconds between successive task executions.
+    final long PERIOD_MS = 2000; // time in milliseconds between successive task executions.
     LinearLayout eventsLinearLayout;
     //    LinearLayout galleryLinearLayout;
     LinearLayout aboutFrameLayout;
@@ -44,9 +45,9 @@ public class HomePage extends android.support.v4.app.Fragment {
     LinearLayout socialLinearLayout ;
     Toast comingSoonToast;
 
-    private int currentPage=0 ;
+    private int currentPage = 0;
     Timer timer ;
-    private int NUM_PAGES=6 ;
+    private int NUM_PAGES = 6;
 
     @Nullable
     @Override
@@ -60,6 +61,22 @@ public class HomePage extends android.support.v4.app.Fragment {
                 getResources().obtainTypedArray(R.array.array_home_slide_show));
 
         viewPagerCustomDuration.setAdapter(eventsAdapter);
+        viewPagerCustomDuration.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                currentPage = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         /*Adding automatic swap to the images
         * */
         final Handler handler = new Handler();
