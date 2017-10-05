@@ -19,6 +19,7 @@
         <item>Photography</item>
         <item>Treasure Hunt</item>
         <item>Quiz-wiz</item>
+        <item>Management</item>
     </string-array>
 
     <string-array name="array_event_text">
@@ -31,6 +32,7 @@
         <item>Not Just Another Computer Klub</item>
         <item>The Electrical Engineering Club</item>
         <item>Society of Automobile Engineers</item>
+        <item>Association of Civil Engineers</item>
         <item>Association of Civil Engineers</item>
     </string-array>
 
@@ -45,6 +47,7 @@
         <item>in.org.celesta2k17.activities.PhotographyEvents</item>
         <item>in.org.celesta2k17.activities.TreasureHunt</item>
         <item>in.org.celesta2k17.activities.QuizWizEvents</item>
+        <item>in.org.celesta2k17.activities.ManagementEvents</item>
     </string-array>
 
     <integer-array name="array_event_images">
@@ -58,6 +61,7 @@
         <item>@drawable/photography</item>
         <item>@drawable/treasure_hunt</item>
         <item>@drawable/quiz_wiz</item>
+        <item>@drawable/management</item>
     </integer-array>
 
     <!--NJACK Events-->
@@ -531,7 +535,7 @@
 
     <integer-array name="array_coding_event_images">
         <item>@drawable/capture_the_flag</item>
-        <item>@drawable/njack</item>
+        <item>@drawable/byte_race</item>
     </integer-array>
 
     <string-array name="array_coding_organizers">
@@ -699,6 +703,72 @@
         <item> - 9041083838\n - 7761937143\n - 9955534759</item>
         <item> - 7303069559</item>
         <item> - 7023460310</item>
+    </string-array>
+    <!--Quiz Wiz events end -->
+
+    <!--Management Events-->
+    <string-array name="array_management_event_headers">
+        <item>MONOPOLY</item>
+        <item>B-QUIZ</item>
+        <item>IPL AUCTION</item>
+        <item>E-DEBATE</item>
+        <item>STOCKMART</item>
+    </string-array>
+
+    <string-array name="array_management_event_text">
+        <item>There is a haggler, manager, entrepreneur inside every person. To reminiscence you to your childhood, to bring forth your talent and to introduce you to real business world, Celesta\'17 in association with Entrepreneurship Club, IIT Patna presents Monopoly.</item>
+        <item>The opportunity to show your skills and knowledge in the field of business is knocking your door.We have a variety of question to satisfy everyone from a hardcore business enthusiast to an enthusiastic newcomer. So brush up your grey cells, hone your business skills and get ready for yet another edition of business quiz.</item>
+        <item><![CDATA[Ever thought what you would do if you got a chance to build your own IPL team. To use your knowledge of the ‘Big Game’ and your sixth sense to create the perfect team that goes on to lift the coveted Trophy. To use permutation and combination and make the best choice keeping in mind the huge investment that goes into putting together a winning team. To learn Strategizing, Resource management, Entrepreneurship, all at the same time in a fun-filled Cricketing event. It has been truly said “The biggest risk is not taking any risk… In a world that is changing really quickly, the only strategy that is guaranteed to fail is not taking risks”.Therefore be ready to take risks while bidding on the players. \n“Being busy does not always mean real work. The object of all work is production or accomplishment and to either of these ends there must be forethought, system, planning, intelligence, and honest purpose, as well as perspiration. Seeming to do is not doing”.Hence strategize with your team members before you bid for a player. This Celesta its going to be a lot of fun so fasten your seat belts and be ready to grab the opportunity of building your very own IPL team!]]></item>
+        <item>E-Club has come up with the golden opportunity to brush up your debating skills with the help of entrepreneurial knowledge. The event will test your speaking style, resiliency, innovation quotient, focus, etc. with other debating skills like clarity, fluency and diction in speech.</item>
+        <item>"No price is too low for a bear OR too high for a bull.”\nStockmart is a virtual stock exchange competition organised by  Entrepreneurship Club. One of the most electrifying events of eclub where many users can buy and share virtual shares and experience all nuances of a real stock market. Stockmart gives you a chance to showcase your calculated risk taking skills to enhance on a virtual level. It is a 2 hour event where you can register with your email ids and be a part of the stimulating environment of Stockmart.</item>
+    </string-array>
+
+    <string-array name="array_management_event_rules">
+        <item>1.It\'s an individual 3D gaming event.\n2. Computerized output will come. You have to move\nto corresponding position accordingly.\n3. After moving to a particular position , You have three options:-\n(a) Buy that location.\n(b) Pay tax corresponding to that location.\n(c) Go for mutual settlement with current location owner. In case owner is bank , then mutual settlement is not applicable.\n4. At the end of game you will get one chance to transfer account balance to someone else\'s account if you want else you can ignore it.\n5. Registrations would be done on the spot.\n6. Player with maximum property(Balance + Assets) at the end will be the winner.</item>
+        <item>1.The quiz will be conducted in two rounds- Prelims and Mains.\nPrelims will contain 20 Questions about the current corporate world and the history of Entrepreneurship and Business making.\n2. All the participants should be participating in a team of two.\nThe participants selected from the Prelims will get to play the Final Mains Round</item>
+        <item>1.It is a team game where each team comprises of 5 members.\n2.There will be two rounds-Quiz and Auction.\n3.First round will be a quiz regarding your cricket knowledge(IPL/Game stats).\n4.Selected teams from the first round will advance to the second round.\n5.In the second round , each team will be given a fixed budget with which they’ll have to buy an ipl team in the Auction.</item>
+        <item>Participants will be required to register with a team of two members. A topic will be given beforehand which will be common for all the teams for the first round. The teams selected for the second round will be given one hour to prepare for the new topic. So embrace yourself for the challenge and bring out the Orator in you !!</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="array_management_event_venue">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="array_management_event_date_time">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+    </string-array>
+
+    <integer-array name="array_management_event_images">
+        <item>@drawable/monopoly</item>
+        <item>@drawable/bquiz</item>
+        <item>@drawable/ipl_auction</item>
+        <item>@drawable/e_debate</item>
+        <item>@drawable/stockmart</item>
+    </integer-array>
+
+    <string-array name="array_management_organizers">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="array_management_contacts">
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
+        <item>-1</item>
     </string-array>
     <!--Quiz Wiz events end -->
 
