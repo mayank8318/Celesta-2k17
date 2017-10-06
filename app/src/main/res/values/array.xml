@@ -1098,6 +1098,85 @@
         <item>9pm to 11pm</item>
     </string-array>
 
+    <string-array name="array_day2_event_header">
+        <item>Spageridge</item>
+        <item>Adhyayan Video Recording</item>
+        <item>Robowars(Group Stage)</item>
+        <item>E - Debate</item>
+        <item>Electroexquizite</item>
+        <item>Samadhan</item>
+        <item>Chem Charades(Round 1)</item>
+        <item>Parliamentary Debate</item>
+        <item>Chemoquest</item>
+        <item>Mindbenders</item>
+        <item>Chem e switch</item>
+        <item>Chem Charades(Round 2)</item>
+        <item>Robowars(Final)</item>
+        <item>Guest Lecture</item>
+        <item>Closing Ceremony</item>
+        <item>Stockmart</item>
+    </string-array>
+
+    <!--Location Array-->
+    <string-array name="array_day2_event_location">
+        <item>R 102</item>
+        <item>R 302</item>
+        <item>Boys’ Hostel Front Side</item>
+        <item>Senate Hall</item>
+        <item>R 104</item>
+        <item>R 103</item>
+        <item>R 106</item>
+        <item>Senate Hall</item>
+        <item>Boys’ Hostel Front Side</item>
+        <item>R 107</item>
+        <item>R 106</item>
+        <item>R 106</item>
+        <item>Boys’ Hostel Front Side</item>
+        <item>Senate Hall</item>
+        <item>Senate Hall</item>
+        <item>Online</item>
+    </string-array>
+
+    <!--Date Array-->
+    <string-array name="array_day2_event_dates">
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+        <item>08–10–2017</item>
+    </string-array>
+
+    <!--Time Array-->
+    <string-array name="array_day2_event_time">
+        <item>8am to 5pm</item>
+        <item>9am to 5pm</item>
+        <item>9am to 2pm</item>
+        <item>9am to 2pm</item>
+        <item>10am to 1pm</item>
+        <item>11am to 2pm</item>
+        <item>12am to 2pm</item>
+        <item>1am to 6pm</item>
+        <item>2am to 5pm</item>
+        <item>2pm to 3pm</item>
+        <item>3am to 5pm</item>
+        <item>4pm to 6pm</item>
+        <item>5pm to 6pm</item>
+        <item>6pm to 7pm</item>
+        <item>7pm to 9pm</item>
+        <item>10pm to 12am</item>
+    </string-array>
+
     <!--Debate events-->
     <string-array name="array_debate_event_headers">
         <item>Parliamentary debate</item>
