@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import in.org.celesta2k17.R;
 import in.org.celesta2k17.fragments.ScheduleDay1;
 import in.org.celesta2k17.fragments.ScheduleDay2;
-import in.org.celesta2k17.fragments.ScheduleDay3;
 
 public class ScheduleActivity extends AppCompatActivity {
 
@@ -94,8 +93,6 @@ public class ScheduleActivity extends AppCompatActivity {
                     return new ScheduleDay1();
                 case 1:
                     return new ScheduleDay2();
-                case 2:
-                    return new ScheduleDay3();
                 default:
                     return null;
             }
@@ -104,7 +101,7 @@ public class ScheduleActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -114,8 +111,6 @@ public class ScheduleActivity extends AppCompatActivity {
                     return "DAY 1";
                 case 1:
                     return "DAY 2";
-                case 2:
-                    return "DAY 3";
             }
             return null;
         }
