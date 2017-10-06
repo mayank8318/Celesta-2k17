@@ -409,7 +409,7 @@
     </string-array>
 
     <string-array name="array_photography_event_venue">
-        <item>-1</item>
+        <item>Online Event</item>
     </string-array>
 
     <integer-array name="array_photography_event_images">
@@ -451,7 +451,7 @@
 
     <string-array name="array_treasure_event_venue">
         <item>Boys Hostel: Front Side</item>
-        <item>-1</item>
+        <item>Online Event</item>
         <item>Boys Hostel: Front Side</item>
     </string-array>
 
@@ -529,8 +529,8 @@
     </string-array>
 
     <string-array name="array_coding_event_venue">
-        <item>-1</item>
-        <item>-1</item>
+        <item>Online Event</item>
+        <item>Online Event</item>
     </string-array>
 
     <integer-array name="array_coding_event_images">
@@ -728,7 +728,7 @@
         <item>Tutorial Block R.107</item>
         <item>Tutorial Block R.109</item>
         <item>Senate Hall</item>
-        <item>-1</item>
+        <item>Online Event</item>
     </string-array>
 
     <string-array name="array_management_event_date_time">
@@ -1223,7 +1223,7 @@
 
     <string-array name="array_social_event_venue">
         <item>Tutorial Block - Room No. 302</item>
-        <item>-1</item>
+        <item>Online Event</item>
         <item>Tutorial Block - Room No. 103</item>
     </string-array>
 
@@ -1267,7 +1267,7 @@
     </string-array>
 
     <string-array name="array_design_event_venue">
-        <item>-1</item>
+        <item>Online Event</item>
     </string-array>
 
     <string-array name="array_design_event_date_time">
