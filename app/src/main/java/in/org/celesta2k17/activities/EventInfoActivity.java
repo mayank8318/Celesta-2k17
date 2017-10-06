@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -58,6 +59,7 @@ public class EventInfoActivity extends AppCompatActivity {
         else
             ((TextView) findViewById(R.id.event_info_textview)).setText(text);
 
+        ((TextView)findViewById(R.id.event_info_textview)).setMovementMethod(LinkMovementMethod.getInstance());
         final String finalText = text.equals("-1") ? "Keep checking the app and website for updates." : text;
 
         TextView rulesTextView = (TextView) findViewById(R.id.event_rules_textview);

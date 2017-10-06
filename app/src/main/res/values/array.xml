@@ -643,7 +643,7 @@
     <string-array name="array_robotics_organizers">
         <item>Navin Kumar\nAkshat Rahul\nLahu Gujarkar\nSrijan Sumant\nAryan Kumar</item>
         <item>Rahul Kumar\nVivek Raj\nReddi Sai Vamsi\nVijay Sharma\nSohid Ture</item>
-        <item>Bharat Shah\nKundan Kumar\nMd Hilal Choudhary\nShivesh Yadav\nDeepak Meenab</item>
+        <item>Bharat Shah\nKundan Kumar\nMd Hilal Choudhary\nShivesh Yadav\nDeepak Meena</item>
     </string-array>
 
     <string-array name="array_robotics_contacts">
@@ -668,7 +668,7 @@
     </string-array>
 
     <string-array name="array_quizwiz_event_rules">
-        <item>First round is the Preliminary. Where you will be given a questionnaire consisting of questions. The participants have to solve the questions to earn points or SPARKOINS. Either top 25 percentile or Top 10 Contestant teams (Whichever is highest) will be selected for the second round, Qualifiers.\nIn Qualifiers, the contestant teams have to use the Sparkoins to buy electronic components and provide a solution by making a circuit in breadboard by using the components bought components. The problem to be solved will be provided by a lucky draw. The team with the highest Sparkoins will be the first to draw. Here there will be points for the circuit and also for the timings. The counting of the clock begins from the time you get the problem. There will be a COMPO-STORE where you can buy electronic components. 5 teams with a highest score in Qualifiers will be selected for the third round, Finale. The amount of Sparkoins left after the qualifier will be a deciding factor.\nThe third and the final round will be a what happens if type competition which will be a rapid fire round in which a circuit will be shown and asked what will happen if the given thing is altered in the circuit. it will be a one hit answering round with negative marking included(penalty).\nThe one with the maximum number of points in the final round will be declared winner.\n\nImportant declaration : \n1)Please keep checking the Celesta app, website and Celesta, IIT Patna facebook page for any future updates.\n2)The rules can change without prior notification.\n3)In case of any dispute, the decisions made by the organising committee and judges are final and binding.\n</item>
+        <item>First round is the Preliminary. Where you will be given a questionnaire consisting of questions. The participants have to solve the questions to earn points or SPARKOINS. Either top 25 percentile or Top 10 Contestant teams (Whichever is highest) will be selected for the second round, Qualifiers.\nIn Qualifiers, the contestant teams have to use the Sparkoins to buy electronic components and provide a solution by making a circuit in breadboard by using the components bought components. The problem to be solved will be provided by a lucky draw. The team with the highest Sparkoins will be the first to draw. Here there will be points for the circuit and also for the timings. The counting of the clock begins from the time you get the problem. There will be a COMPO-STORE where you can buy electronic components. 5 teams with a highest score in Qualifiers will be selected for the third round, Finale. The amount of Sparkoins left after the qualifier will be a deciding factor.\nThe third round will have three levels, first being what happens if the given thing is altered in the circuit. In one you will have to guess the photo and in another there\'ll be jumbled words. All rounds will be buzzer rounds.\nThe one with the maximum number of points in the final round will be declared winner.\n\nImportant declaration : \n1)Please keep checking the Celesta app, website and Celesta, IIT Patna facebook page for any future updates.\n2)The rules can change without prior notification.\n3)In case of any dispute, the decisions made by the organising committee and judges are final and binding.\n</item>
         <item>1)AstroParticle Voyage is a three levelled competition.\n2)Participants can participate in a team of maximum two.\n3)First level is a paper-pen round consisting of five subcategories: Theoretical Astronomy, Observational Astronomy, Theoretical Particle Physics, Observational Particle Physics and Mathematics. Intermediate level questions regarding each would be asked.\n4)Second Level is a quiz round where questions would be asked in a round table arrangement. \n5)Third level is a simulation round where simulations would be shown of some phenomenon and a problem would be given based on it.\n6)Points would be given for each round and the team with maximum cumulative score in the end wins.\n7)No reference except the ones given by us can be used during the entirety of the competition.\n8)All decisions taken by the organisers would be final in case of any discrepancy or issue.</item>
         <item>1)This is a team event. Students should participate in teams of two members of same squad.2)Students of different institutions can form a team but of same squad.3)There are two squads\nJUNIOR SQUAD - for students of class 7 to 10.\nSENIOR SQUAD - for student of class 11 and above including college student.\n3)The event will be in form of pen-paper quiz. The question will have various sections like maths, puzzles, reasoning etc. It will consist of single choice correct, multiple choice correct, paragraph and a very few subjective questions.\n4)Each section has its own marking scheme.\n5)Use of any type of electronic gadgets are strictly prohibited during the test.\n\nQUESTIONS - 30\tTIME – 1 HOUR\nImportant declaration :\n1)Please keep checking the Celesta website and Celesta, IIT Patna facebook page for any future updates.\n2)The rules can change without prior notification.\n3)In case of any dispute, the decisions made by the organising committee and judges are final and binding.\n</item>
     </string-array>
@@ -1183,33 +1183,30 @@
     </string-array>
 
     <string-array name="array_debate_event_text">
-        <item>-1</item>
+        <item>Your voice becomes your expression, which reflects in your actions. So be ready to lead the nation with your voice. Come be a part of Parliamentary Debate.\nRegistration Link->\n<a href="https://goo.gl/eLEQWM">https://goo.gl/eLEQWM</a></item>
     </string-array>
 
     <string-array name="array_debate_event_rules">
-        <item>A debate round has two teams with two debaters each and a Speaker. The Speaker serves as both the judge and arbiter of the rules during the round. Note here that "Speaker" always refers to the judge from this point forward. One team represents the Government, while the other represents the Opposition.</item>
-
+        <item>1)The team will consist of 3 members.\n2) The Government team (the side in favour) shall sit on the right hand side of the Speaker. The Opposition (the side against) shall sit on the left.\n3)The motion/agenda will be  provided 15 minutes before the start of any bebate to the respective teams.  \n4) The speaking order will be as follows:\ni) the Prime Minister(3 minutes).\nii)The Leader of Opposition(3 minutes)\niii) The Minister of the Crown (second Government speaker) (2 minutes)\niv)the Leader of the Opposition (second Opposition speaker). (2 minutes)\nv)Third Government speaker will give closing statement .(1 minute  30 seconds)\nvi)Third Opposition  speaker will give closing statement .(1 minute 30 seconds)\nvii)Finally the Prime Minister will deliver the Government rebuttal.(2 minutes)\n5) During the rebuttal, Members (debaters) may not bring up any new arguments or new evidence except in direct refutation of material which has already been presented.\n6) Points of Information are raised while another Member has the floor (i.e. is speaking). If a Member wishes to raise a Point of Information, he/she should stand and with one hand on their head and another pointing forward (in teapot-style) and say: “On that point”. The person who is speaking may refuse to take the point saying: “Not at this time.” Alternatively, they may to choose to take the point. If the speaker refuses the point, the Member raising the POI must sit down. Otherwise, they should deliver their point as succinctly as possible (in less than 15 seconds) Often the point is phrased as a question. All speakers should attempt to both deliver at least one POI and to accept one POI during the course of the debate.\n7) All remarks must be addressed to the Speaker of the House and not to anyone else, e.g. say “Mr. Speaker” not “Mr. Speaker, honourable judges”. The Member must address Mr. Speaker in his/her first sentence.\n8) The Government must define the resolution. Their definition must be accepted unless it is undebatable or unreasonable. If the Opposition wishes to challenge the definition they must do so prior to the start of the debate by appealing to the tournament organizer. The Opposition must show that the Government’s definition is unacceptable and then substitute their own. Definitions may not be challenged during the debate.\n9) The Government may introduce a plan for implementing the resolution if they wish to, but they are not required to do so. If they do propose a plan, they must fully explain it during the Prime Minister’s speech.\n10) If, and only if, the Government introduces a plan, the Opposition may introduce a counterplan, but it is not required to do so. A counterplan is an alternative method of implementing the resolution which is significantly different from the Government plan and is demonstrably better than the Government plan. If the Opposition wants to introduce a counterplan, they must fully explain it during the address of their first speaker.\n11 ) Props (e.g. drawings, models) may not be used. \n12) Debaters should treat each other with respect and judges will penalize debaters guilty of flippancy, discourtesy, or any attempt to belittle another debater.\n13)Use of internet is allowed.\n</item>
     </string-array>
 
     <string-array name="array_debate_event_venue">
-
         <item>-1</item>
     </string-array>
 
     <string-array name="array_debate_event_date_time">
-
         <item>-1</item>
     </string-array>
 
     <string-array name="array_debate_organizers">
-        <item>Prakash Kumar \n Akshay Rajput</item>
+        <item>Prakash Kumar\nAkshay Rajput</item>
     </string-array>
 
     <integer-array name="array_debate_event_images">
         <item>@drawable/parliamentary_debatenew</item>
     </integer-array>
     <string-array name="array_debate_contacts">
-        <item> - 9466273458</item>
+        <item> - 8409147859\n - 9466273458</item>
     </string-array>
     <!--Debate events end -->
 
