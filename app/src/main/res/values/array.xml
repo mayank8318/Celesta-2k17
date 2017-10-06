@@ -444,9 +444,9 @@
     </string-array>
 
     <string-array name="array_treasure_event_date_time">
+        <item>Day 2 – 2pm to 5pm</item>
         <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Day 1 – 2pm to 5pm</item>
     </string-array>
 
     <string-array name="array_treasure_event_venue">
@@ -566,8 +566,8 @@
     </string-array>
 
     <string-array name="array_expo_event_date_time">
-        <item>-1</item>
-        <item>-1</item>
+        <item>Day 1 – 10am to 2pm</item>
+        <item>Day 1 – 5pm to 8pm</item>
     </string-array>
 
     <string-array name="array_expo_event_venue">
@@ -614,9 +614,9 @@
     </string-array>
 
     <string-array name="array_robotics_event_date_time">
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>(Group)Day 1 – 12pm to 3pm\n(Finals)Day 1 – 5pm to 6pm</item>
+        <item>(Group)Day 2 – 9am to 2pm\n(Finals)Day 2 – 5pm to 6pm</item>
+        <item>Day 1 – 4pm to 7pm</item>
     </string-array>
 
     <string-array name="array_robotics_event_venue">
@@ -674,9 +674,9 @@
 
     <string-array name="array_quizwiz_event_date_time">
 
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Day 2 – 10am to 1pm</item>
+        <item>Day 1 – 11am to 2pm\nFinals – 4pm to 5pm</item>
+        <item>Day 2 – 2pm to 3pm</item>
     </string-array>
 
     <integer-array name="array_quizwiz_event_images">
@@ -732,11 +732,11 @@
     </string-array>
 
     <string-array name="array_management_event_date_time">
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Day 1 – 9pm to 11pm</item>
+        <item>Day 1 – 3pm to 6pm</item>
+        <item>Day 1 – 4pm to 8pm</item>
+        <item>Day 2 – 9am to 12pm</item>
+        <item>Day 2 – 10pm to 11pm</item>
     </string-array>
 
     <integer-array name="array_management_event_images">
@@ -1187,7 +1187,7 @@
     </string-array>
 
     <string-array name="array_debate_event_date_time">
-        <item>-1</item>
+        <item>Day 2 – 1pm to 6pm</item>
     </string-array>
 
     <string-array name="array_debate_organizers">
@@ -1228,9 +1228,9 @@
     </string-array>
 
     <string-array name="array_social_event_date_time">
+        <item>Day 2 – 9am to 6pm</item>
         <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Day 2 – 11am to 2pm</item>
     </string-array>
 
     <string-array name="array_social_organizers">
@@ -1314,14 +1314,14 @@
         <item>Tutorial Block - Room No. 102</item>
         <item>Tutorial Block - Room No. 107</item>
         <item>CST Lab 2</item>
-        <item>-1</item>
+        <item>Boys Hostel: North Side</item>
     </string-array>
 
     <string-array name="array_buildit_event_date_time">
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
-        <item>Boys Hostel: North Side</item>
+        <item>Day 1 – 11am to 9pm\nDay 2 – 8am to 6pm</item>
+        <item>Day 1 – 12pm to 2pm</item>
+        <item>Day 2 – 3pm to 5pm</item>
+        <item>Day 1 – 11am to 1pm</item>
     </string-array>
 
     <string-array name="array_buildit_organizers">
