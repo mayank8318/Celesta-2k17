@@ -450,7 +450,7 @@
     </string-array>
 
     <string-array name="array_treasure_event_venue">
-        <item>-1</item>
+        <item>Boys Hostel: Front Side</item>
         <item>-1</item>
         <item>-1</item>
     </string-array>
@@ -571,8 +571,8 @@
     </string-array>
 
     <string-array name="array_expo_event_venue">
-        <item>-1</item>
-        <item>-1</item>
+        <item>Tutorial Block - Room No. 503</item>
+        <item>Tutorial Block - Room Nos. 304, 305</item>
     </string-array>
 
     <integer-array name="array_expo_event_images">
@@ -620,9 +620,9 @@
     </string-array>
 
     <string-array name="array_robotics_event_venue">
+        <item>Civil Workshop</item>
         <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Tutorial Block R.303</item>
     </string-array>
 
 
@@ -668,7 +668,7 @@
     <string-array name="array_quizwiz_event_venue">
 
         <item>-1</item>
-        <item>-1</item>
+        <item>Tutorial Block R.104</item>
         <item>-1</item>
     </string-array>
 
@@ -724,9 +724,9 @@
     </string-array>
 
     <string-array name="array_management_event_venue">
-        <item>-1</item>
-        <item>-1</item>
-        <item>-1</item>
+        <item>Boys Hostel: Front Side</item>
+        <item>Tutorial Block R.107</item>
+        <item>Tutorial Block R.109</item>
         <item>-1</item>
         <item>-1</item>
     </string-array>
@@ -1311,8 +1311,8 @@
     </string-array>
 
     <string-array name="array_buildit_event_venue">
-        <item>-1</item>
-        <item>-1</item>
+        <item>Tutorial Block - Room No. 102</item>
+        <item>Tutorial Block - Room No. 107</item>
         <item>-1</item>
         <item>-1</item>
     </string-array>
@@ -1321,7 +1321,7 @@
         <item>-1</item>
         <item>-1</item>
         <item>-1</item>
-        <item>-1</item>
+        <item>Boys Hostel: North Side</item>
     </string-array>
 
     <string-array name="array_buildit_organizers">
