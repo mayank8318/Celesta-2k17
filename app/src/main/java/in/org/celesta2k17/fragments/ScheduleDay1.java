@@ -39,23 +39,14 @@ public class ScheduleDay1 extends android.support.v4.app.Fragment implements Sch
         scheduleRecyclerView = new ScheduleRecyclerViewAdapter(getActivity(),
                 this,
                 resources.getStringArray(R.array.array_day1_event_header),
-                resources.getStringArray(R.array.array_day1_event_text),
                 resources.getStringArray(R.array.array_day1_event_time),
                 resources.getStringArray(R.array.array_day1_event_dates),
-                resources.getStringArray(R.array.array_day1_event_location),
-                resources.obtainTypedArray(R.array.array_day1_event_image));
+                resources.getStringArray(R.array.array_day1_event_location));
         recyclerView.setAdapter(scheduleRecyclerView);
         return rootView;
     }
 
     @Override
     public void onListClick(EventsData eventsData, View view) throws ClassNotFoundException {
-        Intent intentNew = new Intent(getContext(), Class.forName("in.org.celesta2k17.activities.EventInfoActivity"));
-        intentNew.putExtra(EventInfoActivity.EXTRA_HEADER, eventsData.getHeader());
-        intentNew.putExtra(EventInfoActivity.EXTRA_DESCRIPTION, eventsData.getText());
-        intentNew.putExtra(EventInfoActivity.EXTRA_DATE_TIME, eventsData.getDateTime());
-        intentNew.putExtra(EventInfoActivity.EXTRA_VENUE, eventsData.getVenue());
-        intentNew.putExtra(EventInfoActivity.EXTRA_IMAGE_ID, eventsData.getImageId());
-        startActivity(intentNew);
     }
 }

@@ -662,7 +662,7 @@
     </string-array>
 
     <string-array name="array_quizwiz_event_text">
-        <item>This is a Celesta Event. In this event there will be three rounds. The participants can either be a single person or a team with members up to 3 at max.</item>
+        <item>This is a Celesta Event. In this event there will be three rounds. The participants can either be a single person or a team with members up to 2 at max.</item>
         <item>Enthusiastic about Astronomy? Passionate about Particle-Physics? Think you know your stuff? Then this is your journey through the realm of the big and the small, on the scales ranging from a quark to the entire observable universe. This is the AstroParticle Voyage, a quiz which tests your knowledge thoroughly, and brings out the best of your abilities.</item>
         <item>Mind-Benders is a test of wits and logic. The event involves no syllabus or pre-requisite knowledge. The event will solely test the student’s logical reasoning, analytical thinking abilities , problem-solving capabilities and co-ordination skills.\nGet ready to knock your brains and prove the genius in you in this mind bending rendezvous.</item>
     </string-array>
@@ -772,17 +772,6 @@
     </string-array>
     <!--Quiz Wiz events end -->
 
-
-    <!--Schedule Day 1-->
-    <!--Event header array-->
-    <string-array name="array_day1_event_header">
-        <item>Event 1</item>
-        <item>Event 2</item>
-        <item>Event 3</item>
-        <item>Event 4</item>
-        <item>Event 5</item>
-        <item>Event 6</item>
-    </string-array>
     <string-array name="array_team_names">
         <item>Tarun Garg</item>
         <item>Rajneesh Singh</item>
@@ -1008,54 +997,105 @@
         <item>@drawable/yashchoudhary</item>
     </integer-array>
 
-    <!--Event text array-->
-    <string-array name="array_day1_event_text">
-        <item>Text 1</item>
-        <item>Text 2</item>
-        <item>Text 3</item>
-        <item>Text 4</item>
-        <item>Text 5</item>
-        <item>Text 6</item>
-    </string-array>
 
-    <!--Image ID array-->
-    <string-array name="array_day1_event_image">
-        <item>@drawable/ace</item>
-        <item>@drawable/ic_home_white_24dp</item>
-        <item>@drawable/ic_home_white_24dp</item>
-        <item>@drawable/ic_home_white_24dp</item>
-        <item>@drawable/ic_home_white_24dp</item>
-        <item>@drawable/ic_home_white_24dp</item>
+    <!--Schedule Day 1-->
+    <!--Event header array-->
+    <string-array name="array_day1_event_header">
+        <item>Opening Ceremony</item>
+        <item>Spageridge</item>
+        <item>School Exhibition</item>
+        <item>Rocket Propulsion</item>
+        <item>Astro Particle Voyage</item>
+        <item>Astro Particle Voyage (Final Round)</item>
+        <item>Static Rush</item>
+        <item>Aqua Soccer(Group Stage)</item>
+        <item>Aqua Soccer(Final)</item>
+        <item>Research Conclave</item>
+        <item>B-Quiz</item>
+        <item>Maze Solver</item>
+        <item>IPL Auction</item>
+        <item>House of Cards</item>
+        <item>Virtual Auto Expo</item>
+        <item>Monopoly</item>
     </string-array>
+    <!--Event text array-->
+    <!--<string-array name="array_day1_event_text">-->
+        <!--<item>Attention here guys!!\nCelesta 2k17 kicks off with the opening ceremony on day 1.</item>-->
+        <!--<item>Celesta brings you a chance of showing your engineering skills with noodles!\nSo, get innovative and build your bridge model with this unconventional construction material.</item>-->
+        <!--<item>Text 3</item>-->
+        <!--<item>Text 4</item>-->
+        <!--<item>Text 5</item>-->
+        <!--<item>Text 6</item>-->
+    <!--</string-array>-->
+
+    <!--&lt;!&ndash;Image ID array&ndash;&gt;-->
+    <!--<string-array name="array_day1_event_image">-->
+        <!--<item>@mipmap/ic_launcher_round</item>-->
+        <!--<item>@drawable/spageridge_final</item>-->
+        <!--<item>@drawable/tech_exhibition</item>-->
+        <!--<item>@drawable/rocket_propulsion</item>-->
+        <!--<item>@drawable/ic_home_white_24dp</item>-->
+        <!--<item>@drawable/ic_home_white_24dp</item>-->
+    <!--</string-array>-->
 
     <!--Location Array-->
     <string-array name="array_day1_event_location">
+        <item>Senate Hall</item>
+        <item>R 102</item>
+        <item>R 103</item>
+        <item>Boys\' Hostel - North Side</item>
+        <item>R 104</item>
+        <item>R 104</item>
+        <item>Boys\' Hostel - Front Side</item>
+        <item>Civil Workshop</item>
+        <item>Civil Workshop</item>
+        <item>Senate Hall</item>
         <item>R 107</item>
+        <item>R 303</item>
+        <item>R 109</item>
         <item>R 107</item>
-        <item>R 107</item>
-        <item>R 107</item>
-        <item>R 107</item>
-        <item>R 107</item>
+        <item>R 304, R 305</item>
+        <item>Boys\' Hostel - Front Side</item>
     </string-array>
 
     <!--Date Array-->
     <string-array name="array_day1_event_dates">
-        <item>24–07–2017</item>
-        <item>24–07–2017</item>
-        <item>24–07–2017</item>
-        <item>24–07–2017</item>
-        <item>24–07–2017</item>
-        <item>24–07–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
+        <item>07–10–2017</item>
     </string-array>
 
     <!--Time Array-->
     <string-array name="array_day1_event_time">
-        <item>10am to 12pm</item>
-        <item>10am to 12pm</item>
-        <item>10am to 12pm</item>
-        <item>10am to 12pm</item>
-        <item>10am to 12pm</item>
-        <item>10am to 12pm</item>
+        <item>9am to 11am</item>
+        <item>11am to 9pm</item>
+        <item>10am to 2pm</item>
+        <item>11am to 1pm</item>
+        <item>11am to 2pm</item>
+        <item>4pm to 5pm</item>
+        <item>2pm to 5pm</item>
+        <item>12pm to 3pm</item>
+        <item>5pm to 6pm</item>
+        <item>5pm to 8pm</item>
+        <item>3pm to 6pm</item>
+        <item>4pm to 7pm</item>
+        <item>4pm to 8pm</item>
+        <item>12pm to 2pm</item>
+        <item>5pm to 8pm</item>
+        <item>9pm to 11pm</item>
     </string-array>
 
     <!--Debate events-->

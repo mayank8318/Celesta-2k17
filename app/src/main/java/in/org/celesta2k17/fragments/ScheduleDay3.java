@@ -41,11 +41,9 @@ public class ScheduleDay3 extends android.support.v4.app.Fragment implements Sch
         scheduleRecyclerView = new ScheduleRecyclerViewAdapter(getContext(),
                 this,
                 resources.getStringArray(R.array.array_day1_event_header),
-                resources.getStringArray(R.array.array_day1_event_text),
                 resources.getStringArray(R.array.array_day1_event_time),
                 resources.getStringArray(R.array.array_day1_event_dates),
-                resources.getStringArray(R.array.array_day1_event_location),
-                resources.obtainTypedArray(R.array.array_day1_event_image));
+                resources.getStringArray(R.array.array_day1_event_location));
         recyclerView.setAdapter(scheduleRecyclerView);
         return rootView;
     }

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import in.org.celesta2k17.activities.ScheduleActivity;
 import in.org.celesta2k17.activities.SocialActivity;
 
 import in.org.celesta2k17.R;
@@ -135,7 +136,9 @@ public class HomePage extends android.support.v4.app.Fragment {
         scheduleLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                comingSoonToast.show();
+//                comingSoonToast.show();
+                Intent intent = new Intent(rootView.getContext(), ScheduleActivity.class);
+                startActivity(intent);
             }
         });
 

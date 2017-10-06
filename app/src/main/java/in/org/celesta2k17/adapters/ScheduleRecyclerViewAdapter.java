@@ -22,22 +22,18 @@ public class ScheduleRecyclerViewAdapter extends RecyclerView.Adapter<ScheduleRe
     private final ScheduleRecyclerViewAdapter.ListCardClick mOnClickListener;
     ArrayList<EventsData> dataList = new ArrayList<>();
     String eventHeader[];
-    String eventText[];
     String time[];
     String date[];
     String venue[];
-    TypedArray images;
     Context context;
 
-    public ScheduleRecyclerViewAdapter(Context context, ScheduleRecyclerViewAdapter.ListCardClick listCardClick, String eventHeader[], String eventText[], String time[], String date[], String venue[], TypedArray images) {
+    public ScheduleRecyclerViewAdapter(Context context, ScheduleRecyclerViewAdapter.ListCardClick listCardClick, String eventHeader[], String time[], String date[], String venue[]) {
         this.context = context;
         mOnClickListener = listCardClick;
         this.eventHeader = eventHeader;
-        this.eventText = eventText;
         this.time = time;
         this.date = date;
         this.venue = venue;
-        this.images = images;
     }
 
     @Override
@@ -58,9 +54,7 @@ public class ScheduleRecyclerViewAdapter extends RecyclerView.Adapter<ScheduleRe
 
         EventsData eventsData = new EventsData();
         eventsData.setHeader(eventHeader[position]);
-        eventsData.setText(eventText[position]);
         eventsData.setVenue(venue[position]);
-        eventsData.setImageId(images.getResourceId(position, -1));
         eventsData.setDateTime(date[position] + " \nTime:" + time[position]);
 
         dataList.add(eventsData);
