@@ -675,7 +675,7 @@
     <string-array name="array_quizwiz_event_date_time">
 
         <item>Day 2 – 10am to 1pm</item>
-        <item>Day 1 – 11am to 2pm\nFinals – 4pm to 5pm</item>
+        <item>Day 1 – 11am to 2pm\n(Finals)Day 1 – 4pm to 5pm</item>
         <item>Day 2 – 2pm to 3pm</item>
     </string-array>
 
@@ -1228,7 +1228,7 @@
     </string-array>
 
     <string-array name="array_social_event_date_time">
-        <item>Day 2 – 9am to 6pm</item>
+        <item>Day 2 – 9am to 5pm</item>
         <item>-1</item>
         <item>Day 2 – 11am to 2pm</item>
     </string-array>
