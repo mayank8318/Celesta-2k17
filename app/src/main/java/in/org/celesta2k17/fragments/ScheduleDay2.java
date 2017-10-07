@@ -10,10 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import in.org.celesta2k17.R;
-import in.org.celesta2k17.activities.EventInfoActivity;
 import in.org.celesta2k17.adapters.ScheduleRecyclerViewAdapter;
 import in.org.celesta2k17.data.EventsData;
 
+/**
+
+ */
 public class ScheduleDay2 extends android.support.v4.app.Fragment implements ScheduleRecyclerViewAdapter.ListCardClick {
 
     RecyclerView recyclerView;
@@ -33,7 +35,7 @@ public class ScheduleDay2 extends android.support.v4.app.Fragment implements Sch
 
         Resources resources = getResources();
 
-        scheduleRecyclerView = new ScheduleRecyclerViewAdapter(getContext(),
+        scheduleRecyclerView = new ScheduleRecyclerViewAdapter(getActivity(),
                 this,
                 resources.getStringArray(R.array.array_day2_event_header),
                 resources.getStringArray(R.array.array_day2_event_time),
@@ -45,12 +47,5 @@ public class ScheduleDay2 extends android.support.v4.app.Fragment implements Sch
 
     @Override
     public void onListClick(EventsData eventsData, View view) throws ClassNotFoundException {
-        Intent intentNew = new Intent(getContext(), Class.forName("in.org.celesta2k17.activities.EventInfoActivity"));
-        intentNew.putExtra(EventInfoActivity.EXTRA_HEADER, eventsData.getHeader());
-        intentNew.putExtra(EventInfoActivity.EXTRA_DESCRIPTION, eventsData.getText());
-        intentNew.putExtra(EventInfoActivity.EXTRA_DATE_TIME, eventsData.getDateTime());
-        intentNew.putExtra(EventInfoActivity.EXTRA_VENUE, eventsData.getVenue());
-        intentNew.putExtra(EventInfoActivity.EXTRA_IMAGE_ID, eventsData.getImageId());
-        startActivity(intentNew);
     }
 }
