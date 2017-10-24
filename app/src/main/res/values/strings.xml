@@ -67,5 +67,6 @@
     <string name="url_login">https://celesta.org.in/api/login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="url_forgot_password">http://celesta.org.in/reset</string>
+    <string name="username">User Name </string>
 
 </resources>
