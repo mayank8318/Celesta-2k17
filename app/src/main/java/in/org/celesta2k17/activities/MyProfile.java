@@ -46,6 +46,8 @@ public class MyProfile extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+//            Intent intent = new Intent(MyProfile.this, LoginActivity.class);
+//                    startActivity(intent);
         } else {
             setContentView(R.layout.activity_register_signup_or_signin);
             TextView fullNameTextView = (TextView) findViewById(R.id.fullName);

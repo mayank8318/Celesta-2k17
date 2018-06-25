@@ -22,5 +22,22 @@
     <color name="cardHeaderBackgroundEvents">#bdbdbd</color>
     <color name="cardBackgroundEvents">#000000</color>
     <color name="fab_background">#212121</color>
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+
+    <color name="color_log_in">#94019c8f</color>
+    <color name="color_sign_up">#93303f9f</color>
+
+
+    <color name="color_logo_log_in">#b4faf5</color>
+    <color name="color_logo_sign_up">#bbc4fd</color>
+
+    <color name="color_label">#ededed</color>
+    <color name="white_transparent">#fafafa</color>
+
+    <color name="color_input_hint">#FFF</color>
+    <color name="color_text_highlight">#fafafa</color>
+    <color name="color_text">#FFF</color>
 </resources>
 
