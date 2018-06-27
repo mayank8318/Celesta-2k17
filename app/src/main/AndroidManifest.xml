@@ -192,7 +192,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="in.org.celesta2k17.activities.EventsActivity" />
         </activity>
-        <activity android:name=".activities.ManagementEvents"></activity>
+        <activity android:name=".activities.ManagementEvents">
+        </activity>
+        <activity android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.org.celesta2k17.activities.EventsActivity" />
+        </activity>
     </application>
 
 </manifest>
