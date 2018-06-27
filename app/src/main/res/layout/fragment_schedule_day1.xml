@@ -5,7 +5,6 @@
     android:orientation="vertical"
     tools:context="in.org.celesta2k17.fragments.ScheduleDay1">
 
-    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_schedule_day1"
         android:layout_width="match_parent"
