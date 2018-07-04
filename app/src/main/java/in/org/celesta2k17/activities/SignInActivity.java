@@ -14,11 +14,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -27,6 +24,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -55,107 +53,95 @@ public class SignInActivity extends AppCompatActivity {
         mQueue = Volley.newRequestQueue(this);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this).edit();
         mUrl = getString(R.string.url_login);
-        forgotPassword = (TextView) findViewById(R.id.forgot_password);
+        forgotPassword = findViewById(R.id.forgot_password);
 
-        forgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri webpage = Uri.parse(getString(R.string.url_forgot_password));
-                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                }
+        forgotPassword.setOnClickListener(view -> {
+            Uri webpage = Uri.parse(getString(R.string.url_forgot_password));
+            Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
             }
         });
 
-        buttonSignIn = (Button) findViewById(R.id.button_signin);
-        emailIDWrapper = (TextInputLayout) findViewById(R.id.eamil_id_wrapper_signin);
-        passwordWrapper = (TextInputLayout) findViewById(R.id.password_wrapper_signin);
+        buttonSignIn = findViewById(R.id.button_signin);
+        emailIDWrapper = findViewById(R.id.eamil_id_wrapper_signin);
+        passwordWrapper = findViewById(R.id.password_wrapper_signin);
 
         setHints();
-        buttonSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearErrors();
-                boolean b = validateInputs();
-                if (b) {
-                    //Code for sending the details
-                    Toast.makeText(getApplicationContext(), "Logging in..", Toast.LENGTH_SHORT).show();
-                    buttonSignIn.setVisibility(View.GONE);
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    Log.v("Response:", response);
-                                    try {
-                                        JSONObject jsonObject = new JSONObject(response);
-                                        int status = Integer.parseInt(jsonObject.getString(getString(R.string.JSON_status)));
+        buttonSignIn.setOnClickListener(v -> {
+            clearErrors();
+            boolean b = validateInputs();
+            if (b) {
+                //Code for sending the details
+                Toast.makeText(getApplicationContext(), "Logging in..", Toast.LENGTH_SHORT).show();
+                buttonSignIn.setVisibility(View.GONE);
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
+                        response -> {
+                            Log.v("Response:", response);
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int status = Integer.parseInt(jsonObject.getString(getString(R.string.JSON_status)));
 
-                                        switch (status) {
-                                            case 200:
-                                                Toast.makeText(getApplicationContext(), "Log In Successful", Toast.LENGTH_LONG).show();
-                                                int userID = Integer.parseInt(jsonObject.getString("userID"));
-                                                String name = jsonObject.getString("name");
-                                                String college = jsonObject.getString("college");
-                                                String events = jsonObject.getString("events");
-                                                sharedPreferences.putBoolean(getString(R.string.login_status), true);
-                                                sharedPreferences.putString(getString(R.string.full_name), name);
-                                                sharedPreferences.putString(getString(R.string.id), userID + "");
-                                                sharedPreferences.putString(getString(R.string.college_name), college);
+                                switch (status) {
+                                    case 200:
+                                        Toast.makeText(getApplicationContext(), "Log In Successful", Toast.LENGTH_LONG).show();
+                                        int userID = Integer.parseInt(jsonObject.getString("userID"));
+                                        String name = jsonObject.getString("name");
+                                        String college = jsonObject.getString("college");
+                                        String events = jsonObject.getString("events");
+                                        sharedPreferences.putBoolean(getString(R.string.login_status), true);
+                                        sharedPreferences.putString(getString(R.string.full_name), name);
+                                        sharedPreferences.putString(getString(R.string.id), userID + "");
+                                        sharedPreferences.putString(getString(R.string.college_name), college);
 //                                                sharedPreferences.putString(getString(R.string.event_participated) , events);
-                                                sharedPreferences.apply();
-                                                finish();
-                                                break;
-                                            case 400:
-                                                Toast.makeText(getApplicationContext(), "Invalid Email Id", Toast.LENGTH_SHORT).show();
-                                                break;
-                                            case 409:
-                                                Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
-                                                finish();
-                                                break;
-                                            case 403:
-                                                Toast.makeText(getApplicationContext(), "Invalid Login", Toast.LENGTH_LONG).show();
-                                                finish();
-                                                break;
-                                            default:
-                                                Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
-                                        }
+                                        sharedPreferences.apply();
+                                        finish();
+                                        break;
+                                    case 400:
+                                        Toast.makeText(getApplicationContext(), "Invalid Email Id", Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case 409:
+                                        Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
+                                        finish();
+                                        break;
+                                    case 403:
+                                        Toast.makeText(getApplicationContext(), "Invalid Login", Toast.LENGTH_LONG).show();
+                                        finish();
+                                        break;
+                                    default:
+                                        Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
+                                }
 
-                                        buttonSignIn.setVisibility(View.VISIBLE);
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            },
-                            new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-                                    Log.v("Error : ", error.toString());
-                                    error.printStackTrace();
-                                    Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
-                                    buttonSignIn.setVisibility(View.VISIBLE);
-                                }
+                                buttonSignIn.setVisibility(View.VISIBLE);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                    ) {
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<>();
-                            params.put(getString(R.string.register_param_emailid), mEmail);
-                            params.put(getString(R.string.register_param_password), mPassword);
-                            params.put(getString(R.string.register_param_apiKey), getString(R.string.api_key));
-
-                            return params;
+                        },
+                        error -> {
+                            Log.v("Error : ", error.toString());
+                            error.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Error logging in. Please try again later", Toast.LENGTH_SHORT).show();
+                            buttonSignIn.setVisibility(View.VISIBLE);
                         }
+                ) {
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put(getString(R.string.register_param_emailid), mEmail);
+                        params.put(getString(R.string.register_param_password), mPassword);
+                        params.put(getString(R.string.register_param_apiKey), getString(R.string.api_key));
 
-                        @Override
-                        public Map<String, String> getHeaders() throws AuthFailureError {
-                            Map<String, String> headers = new HashMap<>();
-                            headers.put("Accept", "application/json");
-                            return headers;
-                        }
-                    };
-                    mQueue.add(stringRequest);
-                }
+                        return params;
+                    }
+
+                    @Override
+                    public Map<String, String> getHeaders() {
+                        Map<String, String> headers = new HashMap<>();
+                        headers.put("Accept", "application/json");
+                        return headers;
+                    }
+                };
+                mQueue.add(stringRequest);
             }
         });
     }
@@ -169,19 +155,19 @@ public class SignInActivity extends AppCompatActivity {
         if (isAnyFieldEmpty())
             return false;
 
-        mEmail = emailIDWrapper.getEditText().getText().toString();
-        mPassword = passwordWrapper.getEditText().getText().toString();
+        mEmail = Objects.requireNonNull(emailIDWrapper.getEditText()).getText().toString();
+        mPassword = Objects.requireNonNull(passwordWrapper.getEditText()).getText().toString();
 
         return true;
     }
 
     private boolean isAnyFieldEmpty() {
         boolean flag = false;
-        if (TextUtils.isEmpty(emailIDWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(emailIDWrapper.getEditText()).getText().toString())) {
             flag = true;
             emailIDWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(passwordWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(passwordWrapper.getEditText()).getText().toString())) {
             flag = true;
             passwordWrapper.setError(getString(R.string.error_empty_field));
         }

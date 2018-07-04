@@ -39,7 +39,7 @@ public class QuizWizEvents extends AppCompatActivity implements EventsRecyclerVi
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_quiz_wiz_events);
 
-        recyclerView = (RecyclerView) findViewById(R.id.rv_events);
+        recyclerView = findViewById(R.id.rv_events);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -47,6 +47,7 @@ public class QuizWizEvents extends AppCompatActivity implements EventsRecyclerVi
         Resources resources = getResources();
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.colorEvents)));
 
         eventsRecyclerViewAdapter = new EventsRecyclerViewAdapter(getApplicationContext(), this,
@@ -64,10 +65,10 @@ public class QuizWizEvents extends AppCompatActivity implements EventsRecyclerVi
     @Override
     public void onListClick(EventsData eventsData, View view) throws ClassNotFoundException {
 
-        ImageView imageView = (ImageView) view.findViewById(R.id.card_cardimage);
-        TextView textViewHeader = (TextView) view.findViewById(R.id.card_header);
-        Pair<View, String> p1 = Pair.create((View) imageView, "event_image_view_transition");
-        Pair<View, String> p2 = Pair.create((View) textViewHeader, "event_text_header_transition");
+        ImageView imageView = view.findViewById(R.id.card_cardimage);
+        TextView textViewHeader = view.findViewById(R.id.card_header);
+        Pair<View, String> p1 = Pair.create(imageView, "event_image_view_transition");
+        Pair<View, String> p2 = Pair.create(textViewHeader, "event_text_header_transition");
 
         ActivityOptionsCompat options = ActivityOptionsCompat.
                 makeSceneTransitionAnimation(this, p1, p2);

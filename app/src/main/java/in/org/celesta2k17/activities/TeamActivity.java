@@ -32,7 +32,7 @@ public class TeamActivity extends AppCompatActivity implements TeamRecylerViewAd
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_team);
 
-        recyclerView = (RecyclerView) findViewById(R.id.teamRecylerView);
+        recyclerView = findViewById(R.id.teamRecylerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -40,6 +40,7 @@ public class TeamActivity extends AppCompatActivity implements TeamRecylerViewAd
         Resources resources = getResources();
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.colorPrimaryDark)));
         //populating the array with the data
         teamRecylerViewAdapter = new TeamRecylerViewAdapter(getApplicationContext(),

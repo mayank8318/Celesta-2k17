@@ -14,6 +14,9 @@ import butterknife.ButterKnife;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import java.util.Objects;
+
 import butterknife.OnClick;
 import butterknife.BindView;
 import in.org.celesta2k17.R;
@@ -38,10 +41,10 @@ public abstract class AuthFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root=inflater.inflate(authLayout(),container,false);
         ButterKnife.bind(this,root);
-        KeyboardVisibilityEvent.setEventListener(getActivity(), isOpen -> {
+        KeyboardVisibilityEvent.setEventListener(Objects.requireNonNull(getActivity()), isOpen -> {
             callback.scale(isOpen);
             if(!isOpen){
                 clearFocus();
@@ -80,7 +83,7 @@ public abstract class AuthFragment extends Fragment {
             caption.post(()->{
                 TransitionManager.beginDelayedTransition(parent, set);
                 caption.setTextSize(TypedValue.COMPLEX_UNIT_PX,getResources().getDimension(R.dimen.unfolded_size));
-                caption.setTextColor(ContextCompat.getColor(getContext(),R.color.color_label));
+                caption.setTextColor(ContextCompat.getColor(Objects.requireNonNull(getContext()), R.color.color_label));
                 caption.setTranslationX(0);
                 ConstraintLayout.LayoutParams params = getParams();
                 params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID;

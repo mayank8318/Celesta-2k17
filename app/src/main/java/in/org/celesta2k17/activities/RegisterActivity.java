@@ -9,11 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -22,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -47,7 +45,6 @@ public class RegisterActivity extends AppCompatActivity {
     RequestQueue mQueue;
     private String mUrl;
     private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-    private Matcher matcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,84 +53,75 @@ public class RegisterActivity extends AppCompatActivity {
 
         mUrl = getString(R.string.register_url);
         mQueue = Volley.newRequestQueue(this);
-        buttonRegister = (Button) findViewById(R.id.button_register);
-        firstNameWrapper = (TextInputLayout) findViewById(R.id.first_name_wrapper);
-        lastNameWrapper = (TextInputLayout) findViewById(R.id.last_name_wrapper);
-        collegeNameWrapper = (TextInputLayout) findViewById(R.id.college_name_wrapper);
-        emailIDWrapper = (TextInputLayout) findViewById(R.id.email_id_wrapper);
-        passwordWrapper = (TextInputLayout) findViewById(R.id.password_wrapper);
-        confirmPasswordWrapper = (TextInputLayout) findViewById(R.id.confirm_password_wrapper);
-        mobileNoWrapper = (TextInputLayout) findViewById(R.id.mobile_no_wrapper);
+        buttonRegister = findViewById(R.id.button_register);
+        firstNameWrapper = findViewById(R.id.first_name_wrapper);
+        lastNameWrapper = findViewById(R.id.last_name_wrapper);
+        collegeNameWrapper = findViewById(R.id.college_name_wrapper);
+        emailIDWrapper = findViewById(R.id.email_id_wrapper);
+        passwordWrapper = findViewById(R.id.password_wrapper);
+        confirmPasswordWrapper = findViewById(R.id.confirm_password_wrapper);
+        mobileNoWrapper = findViewById(R.id.mobile_no_wrapper);
 
         setHints();
-        buttonRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearErrors();
-                boolean b = validateInputs();
-                if (b) {
-                    Toast.makeText(getApplicationContext(), "Registering..", Toast.LENGTH_SHORT).show();
-                    buttonRegister.setVisibility(View.GONE);
-                    //Code for sending the details
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    Log.v("Response:", response);
-                                    try {
-                                        JSONObject jsonObject = new JSONObject(response);
-                                        int status = Integer.parseInt(jsonObject.getString(getString(R.string.JSON_status)));
+        buttonRegister.setOnClickListener(v -> {
+            clearErrors();
+            boolean b = validateInputs();
+            if (b) {
+                Toast.makeText(getApplicationContext(), "Registering..", Toast.LENGTH_SHORT).show();
+                buttonRegister.setVisibility(View.GONE);
+                //Code for sending the details
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, mUrl,
+                        response -> {
+                            Log.v("Response:", response);
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                int status = Integer.parseInt(jsonObject.getString(getString(R.string.JSON_status)));
 
-                                        switch (status) {
-                                            case 200:
-                                                Toast.makeText(getApplicationContext(), R.string.message_registration_success, Toast.LENGTH_LONG).show();
-                                                finish();
-                                                break;
-                                            case 409:
-                                                Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
-                                                finish();
-                                                break;
-                                            default:
-                                                Toast.makeText(getApplicationContext(), "Error registering. Please try again later.", Toast.LENGTH_SHORT).show();
-                                        }
-                                        buttonRegister.setVisibility(View.VISIBLE);
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
+                                switch (status) {
+                                    case 200:
+                                        Toast.makeText(getApplicationContext(), R.string.message_registration_success, Toast.LENGTH_LONG).show();
+                                        finish();
+                                        break;
+                                    case 409:
+                                        Toast.makeText(getApplicationContext(), R.string.message_registration_duplicate, Toast.LENGTH_LONG).show();
+                                        finish();
+                                        break;
+                                    default:
+                                        Toast.makeText(getApplicationContext(), "Error registering. Please try again later.", Toast.LENGTH_SHORT).show();
                                 }
-                            },
-                            new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-                                    Log.v("Error : ", error.toString());
-                                    error.printStackTrace();
-                                    Toast.makeText(getApplicationContext(), "Error registering. Please try again later", Toast.LENGTH_SHORT).show();
-                                    buttonRegister.setVisibility(View.VISIBLE);
-                                }
+                                buttonRegister.setVisibility(View.VISIBLE);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                    ) {
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<>();
-                            params.put(getString(R.string.register_param_name), mName);
-                            params.put(getString(R.string.register_param_college), mCollege);
-                            params.put(getString(R.string.register_param_emailid), mEmail);
-                            params.put(getString(R.string.register_param_password), mPassword);
-                            params.put(getString(R.string.register_param_mobile), mMobile);
-                            params.put(getString(R.string.register_param_apiKey), getString(R.string.api_key));
-
-                            return params;
+                        },
+                        error -> {
+                            Log.v("Error : ", error.toString());
+                            error.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Error registering. Please try again later", Toast.LENGTH_SHORT).show();
+                            buttonRegister.setVisibility(View.VISIBLE);
                         }
+                ) {
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<>();
+                        params.put(getString(R.string.register_param_name), mName);
+                        params.put(getString(R.string.register_param_college), mCollege);
+                        params.put(getString(R.string.register_param_emailid), mEmail);
+                        params.put(getString(R.string.register_param_password), mPassword);
+                        params.put(getString(R.string.register_param_mobile), mMobile);
+                        params.put(getString(R.string.register_param_apiKey), getString(R.string.api_key));
 
-                        @Override
-                        public Map<String, String> getHeaders() throws AuthFailureError {
-                            Map<String, String> headers = new HashMap<>();
-                            headers.put("Accept", "application/json");
-                            return headers;
-                        }
-                    };
-                    mQueue.add(stringRequest);
-                }
+                        return params;
+                    }
+
+                    @Override
+                    public Map<String, String> getHeaders() {
+                        Map<String, String> headers = new HashMap<>();
+                        headers.put("Accept", "application/json");
+                        return headers;
+                    }
+                };
+                mQueue.add(stringRequest);
             }
         });
     }
@@ -151,12 +139,12 @@ public class RegisterActivity extends AppCompatActivity {
     private boolean validateInputs() {
         if (isAnyFieldEmpty())
             return false;
-        mName = firstNameWrapper.getEditText().getText().toString() + " " + lastNameWrapper.getEditText().getText().toString();
-        mCollege = collegeNameWrapper.getEditText().getText().toString();
-        mEmail = emailIDWrapper.getEditText().getText().toString();
-        mPassword = passwordWrapper.getEditText().getText().toString();
-        mConfirmPassword = confirmPasswordWrapper.getEditText().getText().toString();
-        mMobile = mobileNoWrapper.getEditText().getText().toString();
+        mName = Objects.requireNonNull(firstNameWrapper.getEditText()).getText().toString() + " " + Objects.requireNonNull(lastNameWrapper.getEditText()).getText().toString();
+        mCollege = Objects.requireNonNull(collegeNameWrapper.getEditText()).getText().toString();
+        mEmail = Objects.requireNonNull(emailIDWrapper.getEditText()).getText().toString();
+        mPassword = Objects.requireNonNull(passwordWrapper.getEditText()).getText().toString();
+        mConfirmPassword = Objects.requireNonNull(confirmPasswordWrapper.getEditText()).getText().toString();
+        mMobile = Objects.requireNonNull(mobileNoWrapper.getEditText()).getText().toString();
 
         if (!validateEmail(mEmail)) {
             emailIDWrapper.setError(getString(R.string.error_invalid_email));
@@ -179,16 +167,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean validMobile(String mMobile) {
-        if (mMobile.length() != 10)
-            return false;
-        return true;
+        return mMobile.length() == 10;
     }
 
     private boolean validPassword(String password) {
-        if (password.length() > 5)
-            return true;
-        else
-            return false;
+        return password.length() > 5;
     }
 
     private boolean matchingPassword(String password, String confirmPassword) {
@@ -196,37 +179,37 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean validateEmail(String email) {
-        matcher = pattern.matcher(email);
+        Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
 
     private boolean isAnyFieldEmpty() {
         boolean flag = false;
-        if (TextUtils.isEmpty(firstNameWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(firstNameWrapper.getEditText()).getText().toString())) {
             flag = true;
             firstNameWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(lastNameWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(lastNameWrapper.getEditText()).getText().toString())) {
             flag = true;
             lastNameWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(collegeNameWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(collegeNameWrapper.getEditText()).getText().toString())) {
             flag = true;
             collegeNameWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(emailIDWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(emailIDWrapper.getEditText()).getText().toString())) {
             flag = true;
             emailIDWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(passwordWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(passwordWrapper.getEditText()).getText().toString())) {
             flag = true;
             passwordWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(confirmPasswordWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(confirmPasswordWrapper.getEditText()).getText().toString())) {
             flag = true;
             confirmPasswordWrapper.setError(getString(R.string.error_empty_field));
         }
-        if (TextUtils.isEmpty(mobileNoWrapper.getEditText().getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(mobileNoWrapper.getEditText()).getText().toString())) {
             flag = true;
             mobileNoWrapper.setError(getString(R.string.error_empty_field));
         }

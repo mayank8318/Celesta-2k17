@@ -13,6 +13,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
 import java.util.List;
+import java.util.Objects;
 
 import in.org.celesta2k17.R;
 
@@ -25,10 +26,10 @@ public class AuthAdapter extends FragmentStatePagerAdapter
     private final ImageView authBackground;
     private float factor;
 
-    public AuthAdapter(FragmentManager manager,
-                       AnimatedViewPager pager,
-                       ImageView authBackground,
-                       List<ImageView> sharedElements){
+    AuthAdapter(FragmentManager manager,
+                AnimatedViewPager pager,
+                ImageView authBackground,
+                List<ImageView> sharedElements) {
         super(manager);
         this.authBackground=authBackground;
         this.pager=pager;
@@ -64,7 +65,7 @@ public class AuthAdapter extends FragmentStatePagerAdapter
     }
 
     private float getPageOffsetX(AuthFragment fragment){
-        int pageWidth=fragment.getView().getWidth();
+        int pageWidth = Objects.requireNonNull(fragment.getView()).getWidth();
         return pageWidth-pageWidth*factor;
     }
 

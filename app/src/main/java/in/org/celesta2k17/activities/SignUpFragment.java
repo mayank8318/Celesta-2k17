@@ -3,6 +3,7 @@ package in.org.celesta2k17.activities;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TextInputEditText;
@@ -18,6 +19,7 @@ import com.transitionseverywhere.TransitionManager;
 import com.transitionseverywhere.TransitionSet;
 
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindViews;
 import butterknife.ButterKnife;
@@ -33,36 +35,34 @@ public class SignUpFragment extends AuthFragment{
     protected List<TextInputEditText> views;
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(view!=null){
-            view.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.color_sign_up));
-            caption.setText(getString(R.string.sign_up_label));
-            for(TextInputEditText editText:views){
-                if(editText.getId()==R.id.password_input_edit){
-                    final TextInputLayout inputLayout= ButterKnife.findById(view,R.id.password_input);
-                    final TextInputLayout confirmLayout=ButterKnife.findById(view,R.id.confirm_password);
-                    Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
-                    inputLayout.setTypeface(boldTypeface);
-                    confirmLayout.setTypeface(boldTypeface);
-                    editText.addTextChangedListener(new TextWatcherAdapter(){
-                        @Override
-                        public void afterTextChanged(Editable editable) {
-                            inputLayout.setPasswordVisibilityToggleEnabled(editable.length()>0);
-                        }
-                    });
-                }
-                editText.setOnFocusChangeListener((temp,hasFocus)->{
-                    if(!hasFocus){
-                        boolean isEnabled=editText.getText().length()>0;
-                        editText.setSelected(isEnabled);
+        view.setBackgroundColor(ContextCompat.getColor(Objects.requireNonNull(getContext()), R.color.color_sign_up));
+        caption.setText(getString(R.string.sign_up_label));
+        for (TextInputEditText editText : views) {
+            if (editText.getId() == R.id.password_input_edit) {
+                final TextInputLayout inputLayout = ButterKnife.findById(view, R.id.password_input);
+                final TextInputLayout confirmLayout = ButterKnife.findById(view, R.id.confirm_password);
+                Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
+                inputLayout.setTypeface(boldTypeface);
+                confirmLayout.setTypeface(boldTypeface);
+                editText.addTextChangedListener(new TextWatcherAdapter() {
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        inputLayout.setPasswordVisibilityToggleEnabled(editable.length() > 0);
                     }
                 });
             }
-            caption.setVerticalText(true);
-            foldStuff();
-            caption.setTranslationX(getTextPadding());
+            editText.setOnFocusChangeListener((temp, hasFocus) -> {
+                if (!hasFocus) {
+                    boolean isEnabled = editText.getText().length() > 0;
+                    editText.setSelected(isEnabled);
+                }
+            });
         }
+        caption.setVerticalText(true);
+        foldStuff();
+        caption.setTranslationX(getTextPadding());
     }
 
     @Override

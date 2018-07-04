@@ -9,32 +9,19 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 import in.org.celesta2k17.R;
 import in.org.celesta2k17.adapters.PageFragmentAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private PageFragmentAdapter mPageFragmentAdapter;
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-    private ViewPager mViewPager;
     private Menu menu = null;
 
     @Override
@@ -42,17 +29,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mPageFragmentAdapter = new PageFragmentAdapter(getSupportFragmentManager());
+        /*
+      The {@link android.support.v4.view.PagerAdapter} that will provide
+      fragments for each of the sections. We use a
+      {@link FragmentPagerAdapter} derivative, which will keep every
+      loaded fragment in memory. If this becomes too memory intensive, it
+      may be best to switch to a
+      {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+        PageFragmentAdapter mPageFragmentAdapter = new PageFragmentAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        /*
+      The {@link ViewPager} that will host the section contents.
+     */
+        ViewPager mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mPageFragmentAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
         int tabIcons[] = {R.drawable.ic_home_white_24dp,
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.ic_photo_library_white_24dp};
 
         for (int i = 0; i < mPageFragmentAdapter.getCount(); i++)
-            tabLayout.getTabAt(i).setIcon(tabIcons[i]);
+            Objects.requireNonNull(tabLayout.getTabAt(i)).setIcon(tabIcons[i]);
     }
 
 
@@ -125,16 +123,17 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             setContentView(R.layout.activity_register_signup_or_signin);
-            TextView fullNameTextView = (TextView) findViewById(R.id.fullName);
-            TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
-            TextView idTextView = (TextView) findViewById(R.id.idValue);
-            TextView collegeTextView = (TextView) findViewById(R.id.collegeNameValue);
-            TextView eventTextView = (TextView) findViewById(R.id.eventsParticipatedValue);
+            TextView fullNameTextView = findViewById(R.id.fullName);
+            TextView nameTextView = findViewById(R.id.nameTextView);
+            TextView idTextView = findViewById(R.id.idValue);
+            TextView collegeTextView = findViewById(R.id.collegeNameValue);
+            TextView eventTextView = findViewById(R.id.eventsParticipatedValue);
 
             String full_name = sharedPreferences.getString(getString(R.string.full_name), "Mayank Vaidya");
 
             fullNameTextView.setText(sharedPreferences.getString(getString(R.string.full_name), "Mayank Vaidya"));
-            nameTextView.setText("" + Character.toUpperCase(full_name.charAt(0)) + Character.toUpperCase(full_name.charAt(full_name.indexOf(' ') + 1)));
+            String nameViewText = "" + Character.toUpperCase(full_name.charAt(0)) + Character.toUpperCase(full_name.charAt(full_name.indexOf(' ') + 1));
+            nameTextView.setText(nameViewText);
             idTextView.setText(sharedPreferences.getString(getString(R.string.id), "12345"));
             collegeTextView.setText(sharedPreferences.getString(getString(R.string.college_name), "IIT Patna"));
             eventTextView.setText(sharedPreferences.getString(getString(R.string.event_participated), "-"));
