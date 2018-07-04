@@ -1,5 +1,6 @@
 package in.org.celesta2k17.activities;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -41,14 +42,11 @@ public class SplashActivity extends Activity {
         splashImageView.setImageDrawable(splashGif);
 
         handler = new Handler();
-        action = new Runnable() {
-            @Override
-            public void run() {
+        action = () -> {
 //                splashGif.stop();
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         };
 
         DownloadImagesAysncTask downloadImage = new DownloadImagesAysncTask();
@@ -58,6 +56,7 @@ public class SplashActivity extends Activity {
     }
 
     // to trigger download task in background thread
+    @SuppressLint("StaticFieldLeak")
     private class DownloadImagesAysncTask extends AsyncTask<Object, Void, Boolean> {
         @Override
         protected void onPostExecute(Boolean aBoolean) {
@@ -80,6 +79,7 @@ public class SplashActivity extends Activity {
     }
 
     //to trigger download task for extracting highlights
+    @SuppressLint("StaticFieldLeak")
     private class fetchHighlihtsAsynctask extends AsyncTask<Object, Void, Boolean> {
         @Override
         protected void onPreExecute() {

@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -21,6 +22,7 @@ import android.annotation.TargetApi;
 import android.support.annotation.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindViews;
 import butterknife.ButterKnife;
@@ -32,30 +34,28 @@ public class LogInFragment extends AuthFragment{
     protected List<TextInputEditText> views;
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(view!=null){
-            caption.setText(getString(R.string.log_in_label));
-            view.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.color_log_in));
-            for(TextInputEditText editText:views){
-                if(editText.getId()== R.id.password_input_edit){
-                    final TextInputLayout inputLayout=ButterKnife.findById(view,R.id.password_input);
-                    Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
-                    inputLayout.setTypeface(boldTypeface);
-                    editText.addTextChangedListener(new TextWatcherAdapter(){
-                        @Override
-                        public void afterTextChanged(Editable editable) {
-                            inputLayout.setPasswordVisibilityToggleEnabled(editable.length()>0);
-                        }
-                    });
-                }
-                editText.setOnFocusChangeListener((temp,hasFocus)->{
-                    if(!hasFocus){
-                        boolean isEnabled=editText.getText().length()>0;
-                        editText.setSelected(isEnabled);
+        caption.setText(getString(R.string.log_in_label));
+        view.setBackgroundColor(ContextCompat.getColor(Objects.requireNonNull(getContext()), R.color.color_log_in));
+        for (TextInputEditText editText : views) {
+            if (editText.getId() == R.id.password_input_edit) {
+                final TextInputLayout inputLayout = ButterKnife.findById(view, R.id.password_input);
+                Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
+                inputLayout.setTypeface(boldTypeface);
+                editText.addTextChangedListener(new TextWatcherAdapter() {
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        inputLayout.setPasswordVisibilityToggleEnabled(editable.length() > 0);
                     }
                 });
             }
+            editText.setOnFocusChangeListener((temp, hasFocus) -> {
+                if (!hasFocus) {
+                    boolean isEnabled = editText.getText().length() > 0;
+                    editText.setSelected(isEnabled);
+                }
+            });
         }
     }
 

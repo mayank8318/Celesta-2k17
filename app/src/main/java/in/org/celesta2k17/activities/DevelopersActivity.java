@@ -16,12 +16,12 @@ public class DevelopersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_developers);
 
-        ImageView github_muks = (ImageView) findViewById(R.id.github_muks);
-        ImageView github_mayank = (ImageView) findViewById(R.id.github_mayank);
-        ImageView github_manish = (ImageView) findViewById(R.id.github_manish);
-        ImageView fb_muks = (ImageView) findViewById(R.id.fb_muks);
-        ImageView fb_mayank = (ImageView) findViewById(R.id.fb_mayank);
-        ImageView fb_manish = (ImageView) findViewById(R.id.fb_manish);
+        ImageView github_muks = findViewById(R.id.github_muks);
+        ImageView github_mayank = findViewById(R.id.github_mayank);
+        ImageView github_manish = findViewById(R.id.github_manish);
+        ImageView fb_muks = findViewById(R.id.fb_muks);
+        ImageView fb_mayank = findViewById(R.id.fb_mayank);
+        ImageView fb_manish = findViewById(R.id.fb_manish);
 
         String urls[] = {
                 "https://github.com/Muks14x",
@@ -44,7 +44,7 @@ public class DevelopersActivity extends AppCompatActivity {
 
         String mUrl;
 
-        public devOnClickListener(String url) {
+        devOnClickListener(String url) {
             super();
             mUrl = url;
         }

@@ -41,7 +41,7 @@ public class EventInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_info);
 
-        final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_tb_event_info);
+        final CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_tb_event_info);
 
         // Get the Intent that started this activity and extract the strings needed
         Intent intent = getIntent();
@@ -52,7 +52,7 @@ public class EventInfoActivity extends AppCompatActivity {
         String venue = intent.getStringExtra(EXTRA_VENUE);
         final int imageId = intent.getIntExtra(EXTRA_IMAGE_ID, -1);
 
-        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appbar_event_info);
+        AppBarLayout appBarLayout = findViewById(R.id.appbar_event_info);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             boolean isShow = false;
             int scrollRange = -1;
@@ -79,14 +79,15 @@ public class EventInfoActivity extends AppCompatActivity {
                     .into((ImageView) findViewById(R.id.event_info_imageview));
 
         if (text.equals("-1"))
-            ((TextView) findViewById(R.id.event_info_textview)).setVisibility(View.GONE);
-        else
+            findViewById(R.id.event_info_textview).setVisibility(View.GONE);
+        else {
             ((TextView) findViewById(R.id.event_info_textview)).setText(text);
+        }
 
         ((TextView)findViewById(R.id.event_info_textview)).setMovementMethod(LinkMovementMethod.getInstance());
         final String finalText = text.equals("-1") ? "Keep checking the app and website for updates." : text;
 
-        TextView rulesTextView = (TextView) findViewById(R.id.event_rules_textview);
+        TextView rulesTextView = findViewById(R.id.event_rules_textview);
         if (rules.equals("-1")) {
             rulesTextView.setVisibility(View.GONE);
             (findViewById(R.id.rules_header)).setVisibility(View.GONE);
@@ -115,7 +116,7 @@ public class EventInfoActivity extends AppCompatActivity {
         else
             ((TextView) findViewById(R.id.event_venue)).setVisibility(View.GONE);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_share_event);
+        FloatingActionButton fab = findViewById(R.id.fab_share_event);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

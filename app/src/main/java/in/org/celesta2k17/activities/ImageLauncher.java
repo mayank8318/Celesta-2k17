@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 
 import java.io.File;
+import java.util.Objects;
 
 import in.org.celesta2k17.R;
 
@@ -27,11 +28,12 @@ public class ImageLauncher extends AppCompatActivity {
         setContentView(R.layout.imageview);
 
 
-        picture = (File) getIntent().getExtras().get("imageV");
+        picture = (File) Objects.requireNonNull(getIntent().getExtras()).get("imageV");
 
+        assert picture != null;
         if (picture.exists()) {
             Bitmap myBitmap = BitmapFactory.decodeFile(picture.getAbsolutePath());
-            ImageView myImage = (ImageView) findViewById(R.id.launcher);
+            ImageView myImage = findViewById(R.id.launcher);
             myImage.setImageBitmap(myBitmap);
         }
 

@@ -28,38 +28,33 @@ public class MyProfile extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (!sharedPreferences.getBoolean(getString(R.string.login_status), false)) {
             setContentView(R.layout.sign_in);
-            Button buttonSignIn = (Button) findViewById(R.id.button_signin);
-            Button buttonSignUp = (Button) findViewById(R.id.button_signup);
+            Button buttonSignIn = findViewById(R.id.button_signin);
+            Button buttonSignUp = findViewById(R.id.button_signup);
 
-            buttonSignIn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MyProfile.this, SignInActivity.class);
-                    startActivity(intent);
-                }
+            buttonSignIn.setOnClickListener(v -> {
+                Intent intent = new Intent(MyProfile.this, SignInActivity.class);
+                startActivity(intent);
             });
 
-            buttonSignUp.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MyProfile.this, RegisterActivity.class);
-                    startActivity(intent);
-                }
+            buttonSignUp.setOnClickListener(v -> {
+                Intent intent = new Intent(MyProfile.this, RegisterActivity.class);
+                startActivity(intent);
             });
 //            Intent intent = new Intent(MyProfile.this, LoginActivity.class);
 //                    startActivity(intent);
         } else {
             setContentView(R.layout.activity_register_signup_or_signin);
-            TextView fullNameTextView = (TextView) findViewById(R.id.fullName);
-            TextView nameTextView = (TextView) findViewById(R.id.nameTextView);
-            TextView idTextView = (TextView) findViewById(R.id.idValue);
-            TextView collegeTextView = (TextView) findViewById(R.id.collegeNameValue);
-            TextView eventTextView = (TextView) findViewById(R.id.eventsParticipatedValue);
+            TextView fullNameTextView = findViewById(R.id.fullName);
+            TextView nameTextView = findViewById(R.id.nameTextView);
+            TextView idTextView = findViewById(R.id.idValue);
+            TextView collegeTextView = findViewById(R.id.collegeNameValue);
+            TextView eventTextView = findViewById(R.id.eventsParticipatedValue);
 
             String full_name = sharedPreferences.getString(getString(R.string.full_name), "Mayank Vaidya");
 
             fullNameTextView.setText(sharedPreferences.getString(getString(R.string.full_name), "Mayank Vaidya"));
-            nameTextView.setText("" + Character.toUpperCase(full_name.charAt(0)) + Character.toUpperCase(full_name.charAt(full_name.indexOf(' ') + 1)));
+            String nameViewText = "" + Character.toUpperCase(full_name.charAt(0)) + Character.toUpperCase(full_name.charAt(full_name.indexOf(' ') + 1));
+            nameTextView.setText(nameViewText);
             idTextView.setText(sharedPreferences.getString(getString(R.string.id), "12345"));
             collegeTextView.setText(sharedPreferences.getString(getString(R.string.college_name), "IIT Patna"));
             eventTextView.setText(sharedPreferences.getString(getString(R.string.event_participated), "-"));

@@ -24,7 +24,7 @@ public class EventsActivity extends AppCompatActivity implements ClubsRecyclerVi
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_events);
 
-        recyclerView = (RecyclerView) findViewById(R.id.rv_events);
+        recyclerView = findViewById(R.id.rv_events);
         GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -32,6 +32,7 @@ public class EventsActivity extends AppCompatActivity implements ClubsRecyclerVi
         Resources resources = getResources();
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
+        assert bar != null;
         bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.colorEvents)));
 
         clubsRecyclerViewAdapter = new ClubsRecyclerViewAdapter(getApplicationContext(), this, resources.getStringArray(R.array.array_event_headers),

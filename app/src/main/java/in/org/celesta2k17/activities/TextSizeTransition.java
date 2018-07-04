@@ -34,6 +34,7 @@ import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -67,7 +68,7 @@ public class TextSizeTransition extends Transition {
             FONT_SIZE,
     };
 
-    public TextSizeTransition() {
+    TextSizeTransition() {
         addTarget(TextView.class);
     }
 
@@ -402,7 +403,7 @@ public class TextSizeTransition extends Transition {
         }
 
         @Override
-        public void draw(Canvas canvas) {
+        public void draw(@NonNull Canvas canvas) {
             int saveCount = canvas.save();
             // The threshold changes depending on the target font sizes. Because scaled-up
             // fonts look bad, we want to switch when closer to the smaller font size. This
