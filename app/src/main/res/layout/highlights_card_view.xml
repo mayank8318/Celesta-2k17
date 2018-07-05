@@ -27,7 +27,7 @@
                 android:id="@+id/highlightsheader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:fontFamily="sans-serif-medium"
                 android:lineSpacingExtra="4sp"
                 android:padding="4dp"
@@ -47,11 +47,11 @@
                 android:id="@+id/highlightscontent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:fontFamily="sans-serif-light"
                 android:lineSpacingExtra="4sp"
                 android:padding="4dp"
-                android:text="This was a whole new level of race foe jkdjfd dfjdidfd fdf dd fdkfdjfkdjfdfdfd fdfd fdfdfdfldfjdlfjdldjfdlfdjdljdldjdlfjddldjf "
+                android:text="@string/this_was_a_whole_new_level_of_race_foe_jkdjfd_dfjdidfd_fdf_dd_fdkfdjfkdjfdfdfd_fdfd_fdfdfdfldfjdlfjdldjfdlfdjdljdldjdlfjddldjf"
                 android:textColor="@android:color/background_light"
                 android:textSize="17sp" />
         </LinearLayout>

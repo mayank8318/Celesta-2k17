@@ -19,7 +19,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/login_background" />
 
     <in.org.celesta2k17.activities.AnimatedViewPager
         android:id="@+id/pager"
@@ -42,7 +43,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.95"
+        android:contentDescription="@string/fb_icon" />
 
     <ImageView
         android:src="@drawable/linkedin"
@@ -53,7 +55,8 @@
         app:layout_constraintRight_toLeftOf="@+id/last"
         app:layout_constraintTop_toTopOf="@+id/first"
         app:layout_constraintBottom_toBottomOf="@+id/first"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/linked_icon" />
 
     <ImageView
         android:src="@drawable/twitter"
@@ -64,7 +67,8 @@
         app:layout_constraintLeft_toRightOf="@+id/second"
         app:layout_constraintBottom_toBottomOf="@+id/second"
         app:layout_constraintTop_toTopOf="@+id/second"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:contentDescription="@string/twitter_icon" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -82,5 +86,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="@dimen/logo_size"
-        android:layout_height="@dimen/logo_size"/>
+        android:layout_height="@dimen/logo_size"
+        android:contentDescription="@string/login_icon" />
 </android.support.constraint.ConstraintLayout>
