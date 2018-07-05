@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,7 +29,7 @@
                 android:id="@+id/email_id_signin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:drawableStart="@drawable/ic_email_black_24dp"
                 android:drawableTint="@color/colorSignIn"
                 android:hint="@string/email_id_hint"
                 android:inputType="textEmailAddress"
@@ -49,7 +48,7 @@
                 android:id="@+id/password_signin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_security_black_24dp"
+                android:drawableStart="@drawable/ic_security_black_24dp"
                 android:drawableTint="@color/colorSignIn"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword"
@@ -68,7 +67,8 @@
                 android:padding="8dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:textSize="16dp" />
+                android:textSize="16sp"
+                android:focusable="true" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 

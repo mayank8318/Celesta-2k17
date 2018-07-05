@@ -16,5 +16,7 @@
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:scaleType="centerCrop"
-        tools:src="@drawable/njack" />
+        tools:src="@drawable/njack"
+        android:focusable="true"
+        android:contentDescription="@string/gallery_image" />
 </LinearLayout>

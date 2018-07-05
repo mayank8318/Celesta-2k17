@@ -64,10 +64,10 @@
             android:layout_marginBottom="48dp"
             android:layout_marginTop="12dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Manish Kumar"
+            android:text="@string/manish_kumar"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="32dp" />
+            android:textSize="32sp" />
 
     </LinearLayout>
 
@@ -78,9 +78,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16sp"
+            android:layout_marginStart="16sp"
             android:fontFamily="sans-serif-light"
-            android:text="My Profile"
+            android:text="@string/my_profile"
             android:textColor="#fff"
             android:textSize="20sp" />
     </LinearLayout>
@@ -94,10 +94,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16sp"
+            android:layout_marginStart="16sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-medium"
-            android:text="Id"
+            android:text="@string/Id"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -110,7 +110,7 @@
             android:layout_marginRight="16sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
-            android:text="122443"
+            android:text="@string/celesta_id"
             android:textAlignment="textEnd"
             android:textColor="#fff"
             android:textSize="20sp" />
@@ -137,10 +137,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16sp"
+            android:layout_marginStart="16sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-medium"
-            android:text="College"
+            android:text="@string/college"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -153,7 +153,7 @@
             android:layout_marginRight="16sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
-            android:text="IIT Patna"
+            android:text="@string/iit_patna"
             android:textAlignment="textEnd"
             android:textColor="#fff"
             android:textSize="20sp" />
@@ -195,7 +195,7 @@
             android:layout_marginRight="16sp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
-            android:text="NJATH,CPT"
+            android:text="@string/njath_cpt"
             android:textAlignment="textEnd"
             android:textColor="#fff"
             android:textSize="20sp" />

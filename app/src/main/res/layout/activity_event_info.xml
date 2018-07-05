@@ -27,7 +27,8 @@
                 android:layout_height="225dp"
                 android:scaleType="centerCrop"
                 android:transitionName="event_image_view_transition"
-                tools:src="@drawable/ipl_auction" />
+                tools:src="@drawable/ipl_auction"
+                android:contentDescription="@string/ipl_auction_image" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -154,7 +155,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/event_organizers_header"
                             android:layout_marginTop="8dp"
-                            android:layout_toRightOf="@id/event_organizers"
+                            android:layout_toEndOf="@id/event_organizers"
                             android:textAppearance="@android:style/TextAppearance.Holo.Medium"
                             android:textColor="@color/colorDevelopers"
                             android:textIsSelectable="true"

@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical">
 
@@ -39,10 +39,11 @@
                     <ImageView
                         android:layout_width="105dp"
                         android:layout_height="105dp"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/mayank" />
+                        android:src="@drawable/mayank"
+                        android:contentDescription="@string/mayank_image" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -52,20 +53,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16sp"
+                            android:layout_marginStart="16sp"
                             android:layout_marginTop="32sp"
                             android:fontFamily="sans-serif"
-                            android:text="Mayank Vaidya"
+                            android:text="@string/mayank_vaidya"
                             android:textColor="@color/colorPrimaryLight"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
-                            android:text="mayank8318"
+                            android:text="@string/mayank8318"
                             android:textColor="@color/colorSignIn"
                             android:textSize="16sp" />
 
@@ -79,17 +80,19 @@
                                 android:id="@+id/github_mayank"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/github" />
+                                android:src="@drawable/github"
+                                android:contentDescription="@string/github_icon" />
 
                             <ImageView
                                 android:id="@+id/fb_mayank"
                                 android:layout_width="wrap_content"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/facebook" />
+                                android:src="@drawable/facebook"
+                                android:contentDescription="@string/fb_icon" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -133,10 +136,11 @@
                     <ImageView
                         android:layout_width="105dp"
                         android:layout_height="105dp"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/muks" />
+                        android:src="@drawable/muks"
+                        android:contentDescription="@string/mukunta_image" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -146,20 +150,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16sp"
+                            android:layout_marginStart="16sp"
                             android:layout_marginTop="32sp"
                             android:fontFamily="sans-serif"
-                            android:text="Mukuntha N S"
+                            android:text="@string/mukuntha_n_s"
                             android:textColor="@color/colorPrimaryLight"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
-                            android:text="muks14"
+                            android:text="@string/muks14"
                             android:textColor="@color/colorSignIn"
                             android:textSize="16sp" />
 
@@ -173,17 +177,19 @@
                                 android:id="@+id/github_muks"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/github" />
+                                android:src="@drawable/github"
+                                android:contentDescription="@string/github_icon" />
 
                             <ImageView
                                 android:id="@+id/fb_muks"
                                 android:layout_width="wrap_content"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/facebook" />
+                                android:src="@drawable/facebook"
+                                android:contentDescription="@string/fb_icon" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -227,10 +233,11 @@
                     <ImageView
                         android:layout_width="105dp"
                         android:layout_height="105dp"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/manish" />
+                        android:src="@drawable/manish"
+                        android:contentDescription="@string/manish_image" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,20 +247,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16sp"
+                            android:layout_marginStart="16sp"
                             android:layout_marginTop="32sp"
                             android:fontFamily="sans-serif"
-                            android:text="Manish Kumar"
+                            android:text="@string/manish_kumar"
                             android:textColor="@color/colorPrimaryLight"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
-                            android:text="ivary43"
+                            android:text="@string/ivary43"
                             android:textColor="@color/colorSignIn"
                             android:textSize="16sp" />
 
@@ -267,17 +274,19 @@
                                 android:id="@+id/github_manish"
                                 android:layout_width="wrap_content"
                                 android:layout_height="40dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/github" />
+                                android:src="@drawable/github"
+                                android:contentDescription="@string/github_icon" />
 
                             <ImageView
                                 android:id="@+id/fb_manish"
                                 android:layout_width="wrap_content"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="16sp"
+                                android:layout_marginStart="16sp"
                                 android:layout_marginTop="12sp"
-                                android:src="@drawable/facebook" />
+                                android:src="@drawable/facebook"
+                                android:contentDescription="@string/fb_icon" />
                         </LinearLayout>
 
                     </LinearLayout>

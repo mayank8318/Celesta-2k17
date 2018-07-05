@@ -31,8 +31,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:paddingBottom="8dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
                 android:paddingTop="8dp"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Time : "
+                    android:text="@string/time"
                     android:textColor="@android:color/background_light"
                     android:textSize="15sp" />
 
@@ -65,7 +65,7 @@
                     android:id="@+id/time_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/time"
+                    android:layout_toEndOf="@id/time"
                     android:fontFamily="sans-serif-light"
                     android:textColor="@android:color/white"
                     android:textSize="15sp"
@@ -75,7 +75,7 @@
                     android:id="@+id/location_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/location"
+                    android:layout_toEndOf="@+id/location"
                     android:layout_below="@id/time_text_view"
                     android:fontFamily="sans-serif-light"
                     android:textColor="@android:color/white"
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/time_text_view"
                     android:fontFamily="sans-serif-light"
-                    android:text="Location : "
+                    android:text="@string/location"
                     android:textColor="@android:color/background_light"
                     android:textSize="15sp" />
 
