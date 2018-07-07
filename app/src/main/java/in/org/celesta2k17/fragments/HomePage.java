@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
@@ -24,6 +25,7 @@ import in.org.celesta2k17.adapters.EventsAdapter;
 import in.org.celesta2k17.listeners.ViewPagerCustomDuration;
 
 
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -52,11 +54,11 @@ public class HomePage extends android.support.v4.app.Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-        final ViewPagerCustomDuration viewPagerCustomDuration = (ViewPagerCustomDuration) rootView.findViewById(R.id.events_pager);
+        final ViewPagerCustomDuration viewPagerCustomDuration = rootView.findViewById(R.id.events_pager);
         viewPagerCustomDuration.setScrollDuration(900);
         EventsAdapter eventsAdapter = new EventsAdapter(getContext(),
                 getResources().obtainTypedArray(R.array.array_home_slide_show));
@@ -81,13 +83,11 @@ public class HomePage extends android.support.v4.app.Fragment {
         /*Adding automatic swap to the images
         * */
         final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            public void run() {
-                if (currentPage == NUM_PAGES) {
-                    currentPage = 0;
-                }
-                viewPagerCustomDuration.setCurrentItem(currentPage++, true);
+        final Runnable Update = () -> {
+            if (currentPage == NUM_PAGES) {
+                currentPage = 0;
             }
+            viewPagerCustomDuration.setCurrentItem(currentPage++, true);
         };
 
         timer = new Timer(); // This will create a new Thread
@@ -102,79 +102,54 @@ public class HomePage extends android.support.v4.app.Fragment {
 
         comingSoonToast = Toast.makeText(getContext(), getResources().getString(R.string.coming_soon), Toast.LENGTH_SHORT);
 
-        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab_maps);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String uri = "https://www.google.com/maps/@?api=1&map_action=map&center=25.535752,84.851065&zoom=16&basemap=satellite";
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                getContext().startActivity(intent);
-            }
+        FloatingActionButton fab = rootView.findViewById(R.id.fab_maps);
+        fab.setOnClickListener(view -> {
+           // String uri = "https://www.google.com/maps/@?api=1&map_action=map&center=25.535752,84.851065&zoom=16&basemap=satellite";
+            String uri="https://www.google.com/maps/d/viewer?mid=1Tub6_KM_0Tv8UHkh97SP9Tehv78HBv1e&usp=sharingax&basemap=satellite";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+            Objects.requireNonNull(getContext()).startActivity(intent);
         });
 
-        eventsLinearLayout = (LinearLayout) rootView.findViewById(R.id.events);
-        eventsLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(rootView.getContext(), EventsActivity.class);
-                startActivity(intent);
+        eventsLinearLayout = rootView.findViewById(R.id.events);
+        eventsLinearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(rootView.getContext(), EventsActivity.class);
+            startActivity(intent);
 
-            }
         });
 
-        aboutFrameLayout = (LinearLayout) rootView.findViewById(R.id.about);
-        aboutFrameLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        aboutFrameLayout = rootView.findViewById(R.id.about);
+        aboutFrameLayout.setOnClickListener(v -> {
 //                Intent intent = new Intent(rootView.getContext(), AboutActivity.class);
 //                startActivity(intent);
-                comingSoonToast.show();
-            }
+            comingSoonToast.show();
         });
 
-        scheduleLinearLayout = (LinearLayout) rootView.findViewById(R.id.schedule);
-        scheduleLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        scheduleLinearLayout = rootView.findViewById(R.id.schedule);
+        scheduleLinearLayout.setOnClickListener(v -> {
 //                comingSoonToast.show();
-                Intent intent = new Intent(rootView.getContext(), ScheduleActivity.class);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(rootView.getContext(), ScheduleActivity.class);
+            startActivity(intent);
         });
 
-        devLinearLayout = (LinearLayout) rootView.findViewById(R.id.developers);
-        devLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(rootView.getContext(), DevelopersActivity.class);
-                startActivity(intent);
-            }
+        devLinearLayout = rootView.findViewById(R.id.developers);
+        devLinearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(rootView.getContext(), DevelopersActivity.class);
+            startActivity(intent);
         });
 
-        sponsorsLinearLayout = (LinearLayout) rootView.findViewById(R.id.sponsors_menu_item);
-        sponsorsLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                comingSoonToast.show();
-            }
-        });
+        sponsorsLinearLayout = rootView.findViewById(R.id.sponsors_menu_item);
+        sponsorsLinearLayout.setOnClickListener(view -> comingSoonToast.show());
 
-        teamLinearLayout = (LinearLayout) rootView.findViewById(R.id.team);
-        teamLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(rootView.getContext(), TeamActivity.class);
-                startActivity(intent);
+        teamLinearLayout = rootView.findViewById(R.id.team);
+        teamLinearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(rootView.getContext(), TeamActivity.class);
+            startActivity(intent);
 
-            }
         });
-        socialLinearLayout=(LinearLayout)rootView.findViewById(R.id.social);
-        socialLinearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(rootView.getContext(), SocialActivity.class) ;
-                startActivity(intent);
-            }
+        socialLinearLayout= rootView.findViewById(R.id.social);
+        socialLinearLayout.setOnClickListener(v -> {
+            Intent intent= new Intent(rootView.getContext(), SocialActivity.class) ;
+            startActivity(intent);
         });
         return rootView;
     }
